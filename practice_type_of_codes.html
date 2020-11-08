@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Pretty Practice Page</title>
+</head>
+
+<body>
+    <img src="./email_plant.JPG" alt="Becca with a wired plant" width="10%" height="150px" />
+    <header>
+        <h3>Other Articles by Becca</h3>
+        <ul>
+            <li><a href="./css-review.html" target="_blank">CSS Review Article</a></li>
+            <li><a href="./blog.html" target="_blank">Blog Article</a></li>
+            <li><a href="./command_line.html" target="_blank">Command Line Skills</a></li>
+            <li><a href="./todo_list_tutorial/index.html" target="_blank">Becca's ToDo List</a></li>
+        </ul>
+    </header>
+    <h1 align="center">HTML Tags and Tips</h1>
+    <ul>
+        <li>H heading tags range from h1-h6 (h1 is largest, h6 is smallest)
+        </li>
+        <li>Img tags need an src="" and are self-closing, an alt attribute must be set for accessibility</li>
+        <li>Video tags are not self-closing, the text in the middle is displayed if the
+            video cannot render, you can specify the src="" of the video, you can adjust the width and height
+            and if you add the 'controls' attribute in the tag it will give you options to play and pause
+        </li>
+        <li>!DOCTYPE html at the top of page lets html know to render most recent html</li>
+        <li>Anchor tags (a) can be set around any other tags, just add href="" and either the relative (./filename.html)
+            or absolute file path of the link... and target="_blank" can be specified if you want it to open in a new
+            tab
+        </li>
+        <li>Em tag is to <em>italicize</em> words, <strong>strong tag is to bold them</strong></li>
+        <li>To link to other parts of same page, giv e the tag you want to link to an ID, then in the Anchor
+            tag use href="#idHere"
+        </li>
+        <!--This practice page is helpful-->
+        <li>Comments are added in html by typing ">!--" to open the comment (only with an opening bracket) and
+            using "-->" to end the comment
+        </li>
+        <li>The difference between >b> tags and >strong> is b bolds and strong emphasizes important content</li>
+        <li>Diff between >i> and >em> tags is i italicizes and em emphasizes important content</li>
+        <li>Sub tag creates a <sub>subscript</sub>, sup tag creates a <sup>superscript</sup></li>
+        <li>To create a strikethrough, you can use <del>del</del> or <strike>strike</strike></li>
+        <li>The Ins tag will <ins>create an inserted look</ins></li>
+        <li>There's also a <big>big tag</big> and a <small>small tag</small></li>
+        <li>To add new lines or spacing, add the >br /> tag; to add a visible line to separate distinct content
+            add an >hr /> tag
+        </li>
+        <li>Rather than typing <strong> document.querySelector() </strong> to select an element, you can
+            type<strong>$()</strong>.
+            This syntax is inspired by jQuery, but it's not actually jQuery. It's just an alias for
+            document.querySelector()</li>
+    </ul>
+    <br>
+    <hr />
+    <h2>About Me</h2>
+    <p>I like learning to code since the logic makes sense and the puzzle of it holds my interest.
+        I believe in the power of technology to make a difference in peoples' learning
+        to make a better life for themselves.
+    </p>
+
+    <h3>Further Research for Me to Learn</h3>
+    <ul>
+        <li><a href="https://docs.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial"
+                target="_blank">Learn About Docker-- Tutorial and Building Container from Scratch Video</a></li>
+        <li><a href="https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504"
+                target="_blank">Kernel Space Article</a></li>
+    </ul>
+</body>
+
+</html>

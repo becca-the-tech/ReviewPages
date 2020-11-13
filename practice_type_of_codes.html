@@ -64,6 +64,34 @@
             is first then a question mark is used and two expressions follow which are separated by a semi-colon
             <br>(ex: conditionalStatement ? console.log("Prints If Conditional Is True") : console.log("Prints If
             False"); )</li>
+        <li>Hoisting is the ability of JS to call functions in a program before they're actually defined, but it is not
+            considered good practice. Good practice is functions defined at the top before usage.. Hoisting works
+            because variable and function definitions stay in memory during the compile phase, so during execution they
+            already exist... Only declarations are hoisted, not initialization if that is done separately so if you
+            declare a variable without initializing it, it will be undefined until the part of the code that initializes
+            it.. Also only declarations using var are hoisted, not those using let or const</li>
+        <li>Defining a function does not actually execute the function, only calling the function does that.
+            <br>ex: function hiya(){ console.log('Hiya!') } will not print to the console automatically. Only when you
+            run hiya() will it run and print to the console.</li>
+        <li>ES6 JS allows for default parameters to use a default value if called without that parameters
+            <br>ex: function hiya(name = 'mystery person'){ console.log('Hiya ' + name)} will print to the console 'Hiya
+            nameOfPerson' or if called just
+            hiya() without arguments, it will print 'Hiya mystery person'
+        </li>
+        <li>Functions being called within other functions to make code more readable are known as 'helper functions'
+            since each function is carrying out a specific task.. Writing helper functions can break down large complex
+            tasks into smaller pieces
+        </li>
+        <li>Functions can be anonymous, given no name to run just a code block with the function keyword OR
+            Function expressions can be used in which a variable (usually declared with const) can be used to call the
+            function in the future
+        </li>
+        <li>Pass by reference is when you pass in an array variable into a function, and it changes outside the function
+            (mutates) because when you pass it into a function, you're actually passing a reference to where the
+            variable memory is stored and then changing the variable memory
+        </li>
+        <li>If you try to go to an array index that is out of bound in JS, it will show you that element is undefined
+        </li>
     </ul>
     <br>
     <hr />

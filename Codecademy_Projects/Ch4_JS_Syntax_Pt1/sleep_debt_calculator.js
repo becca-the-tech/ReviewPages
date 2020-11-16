@@ -30,6 +30,7 @@ function getSleepHours(day) {
 }
 
 //returns total sleep hours
+// @ts-ignore
 const getActualSleepHours = () => getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
 
 //returns ideal hours of sleep for a week

@@ -58,7 +58,7 @@ function deleteCheck(e) {
         });
     }
 
-    //Check Mark
+    //Checkmark means "completed"
     if (item.classList[0] === 'complete-btn') {
         const todo = item.parentElement;
         todo.classList.toggle("completed");

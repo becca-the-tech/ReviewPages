@@ -14,6 +14,7 @@
             <li><a href="./blog.html" target="_blank">Blog Article</a></li>
             <li><a href="./command_line.html" target="_blank">Command Line Skills</a></li>
             <li><a href="./todo_list_tutorial/index.html" target="_blank">Becca's ToDo List</a></li>
+            <li><a href="./calendar.html" target="_blank">Becca's Calendar</a></li>
         </ul>
     </header>
     <h1 align="center">HTML Tags and Tips</h1>
@@ -116,7 +117,37 @@
             <br>Ex: objectName { methodName : function(){ console.log('This is what objectName.methodName() does') } }
             <br>Ex 2: objectName { methodName() { console.log('This is the alternate way of using methods in ES6') } }
         </li>
-
+        <li>In JS, object methods do not automatically have access to the other properties of the method, must use
+            'this' keyword for them to get access</li>
+        <li>Avoid using arrow functions within objects using the 'this' keyword since the arrow syntax automatically
+            bind an already defined this keyword to the function that is not calling the object, it uses a global object
+            already defined and thus does not have the same properties as the object you're in</li>
+        <li>JS does not come with privacy built in mind to tell people not to change variables/properties, so a practice
+            many developers do is prepending variables that should be unmutable with an underscore at the beginning (let
+            _dontTouch), which does not inherently keep people from changing them but does serve as a warning that it
+            should be private</li>
+        <li>Using a getter in JS is creating a method with the 'get' keyword, then inside the method block you can add
+            conditionals to return various results based on inputs of a property. The 'getter property' cannot share the
+            same name as an actual property within the object, and when you call the getter it looks like you're calling
+            a property itself since you don't include parentheses but it gives a fully formatted response
+            <br>Ex: let objectVar = { _dontTouch : 'How dare you!', get noTouchy(){ if(this._dontTouch === 'How dare
+            you!'){ return 'No touchy!'} else{ return 'Someone touched the object properties!!!!!' } } }
+            <br>And when called: objectVar.noTouchy will return 'No touchy!'
+        </li>
+        <li>A factory function lets us quickly make copies of objects with different parameters to make multiple
+            instances of that object easily and quickly.
+            <br>Ex: const objFactory = (parameterName1, parameterName2) => { return { parameterName1: parameterName1,
+            parameterName2: parameterName2} }
+            <br>Instance of objFactory: const newObj = objFactory(prop1, prop2);</li>
+        <li>You can also use property value shorthand to save yourself writing
+            <br>The above obj can be written: const objFactory = (parameterName1, parameterName2) => { return {
+            parameterName1, parameterName2} }
+        </li>
+        <li>Destructured assignment allows you to use an object's key as a variable name and assign the variable from
+            the object
+            <br>Ex: const {residence} = vampire creates a variable residence and assigns it the property value of
+            vampire.residence
+        </li>
     </ul>
     <br>
     <hr />

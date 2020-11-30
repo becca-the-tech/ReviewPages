@@ -8,180 +8,282 @@
 <body>
     <img src="./email_plant.JPG" alt="Becca with a wired plant" width="10%" height="150px" />
     <header>
-        <h3>Other Articles by Becca</h3>
-        <ul>
-            <li><a href="./css-review.html" target="_blank">CSS Review Article</a></li>
-            <li><a href="./blog.html" target="_blank">Blog Article</a></li>
-            <li><a href="./command_line.html" target="_blank">Command Line Skills</a></li>
-            <li><a href="./todo_list_tutorial/index.html" target="_blank">Becca's ToDo List</a></li>
-            <li><a href="./calendar.html" target="_blank">Becca's Calendar</a></li>
-        </ul>
+        <nav>
+            <h3>Other Articles by Becca</h3>
+            <ul>
+                <li><a href="./css-review.html" target="_blank">CSS Review Article</a></li>
+                <li><a href="./blog.html" target="_blank">Blog Article</a></li>
+                <li><a href="./command_line.html" target="_blank">Command Line Skills</a></li>
+                <li><a href="./todo_list_tutorial/index.html" target="_blank">Becca's ToDo List</a></li>
+                <li><a href="./calendar.html" target="_blank">Becca's Calendar</a></li>
+            </ul>
+        </nav>
     </header>
-    <h1 align="center">HTML Tags and Tips</h1>
-    <ul>
-        <li>H heading tags range from h1-h6 (h1 is largest, h6 is smallest)
-        </li>
-        <li>Img tags need an src="" and are self-closing, an alt attribute must be set for accessibility</li>
-        <li>Video tags are not self-closing, the text in the middle is displayed if the
-            video cannot render, you can specify the src="" of the video, you can adjust the width and height
-            and if you add the 'controls' attribute in the tag it will give you options to play and pause
-        </li>
-        <li>!DOCTYPE html at the top of page lets html know to render most recent html</li>
-        <li>Anchor tags (a) can be set around any other tags, just add href="" and either the relative (./filename.html)
-            or absolute file path of the link... and target="_blank" can be specified if you want it to open in a new
-            tab
-        </li>
-        <li>Em tag is to <em>italicize</em> words, <strong>strong tag is to bold them</strong></li>
-        <li>To link to other parts of same page, giv e the tag you want to link to an ID, then in the Anchor
-            tag use href="#idHere"
-        </li>
-        <!--This practice page is helpful-->
-        <li>Comments are added in html by typing ">!--" to open the comment (only with an opening bracket) and
-            using "-->" to end the comment
-        </li>
-        <li>The difference between >b> tags and >strong> is b bolds and strong emphasizes important content</li>
-        <li>Diff between >i> and >em> tags is i italicizes and em emphasizes important content</li>
-        <li>Sub tag creates a <sub>subscript</sub>, sup tag creates a <sup>superscript</sup></li>
-        <li>To create a strikethrough, you can use <del>del</del> or <strike>strike</strike></li>
-        <li>The Ins tag will <ins>create an inserted look</ins></li>
-        <li>There's also a <big>big tag</big> and a <small>small tag</small></li>
-        <li>To add new lines or spacing, add the >br /> tag; to add a visible line to separate distinct content
-            add an >hr /> tag
-        </li>
-        <li>Rather than typing <strong> document.querySelector() </strong> to select an element, you can
-            type<strong>$()</strong>.
-            This syntax is inspired by jQuery, but it's not actually jQuery. It's just an alias for
-            document.querySelector()</li>
-        <li>Using string literals (`Back ticks`) is known as string interpolation in JS</li>
-        <li>The not operator (!) is also known as the Bang operator in JS</li>
-        <li>The dot operator is used for methods/properties (string.length, Math.random()) in JS</li>
-        <li>Short-circuit assignment is when you have an OR conditional and it only assigns the right side if the left
-            side of the conditional is False or a Falsy value <br>(ex: let name = variableName || 'default'... name will
-            be
-            set to 'default' only if variableName is a Falsy value, either undefined or an empty string, otherwise name
-            will be set to the value of variableName) in JS
-        </li>
-        <li>The ternary operator is a simplified way of writing if..else statements.. in them, the conditional statement
-            is first then a question mark is used and two expressions follow which are separated by a semi-colon
-            <br>(ex: conditionalStatement ? console.log("Prints If Conditional Is True") : console.log("Prints If
-            False"); )</li>
-        <li>Hoisting is the ability of JS to call functions in a program before they're actually defined, but it is not
-            considered good practice. Good practice is functions defined at the top before usage.. Hoisting works
-            because variable and function definitions stay in memory during the compile phase, so during execution they
-            already exist... Only declarations are hoisted, not initialization if that is done separately so if you
-            declare a variable without initializing it, it will be undefined until the part of the code that initializes
-            it.. Also only declarations using var are hoisted, not those using let or const</li>
-        <li>Defining a function does not actually execute the function, only calling the function does that.
-            <br>ex: function hiya(){ console.log('Hiya!') } will not print to the console automatically. Only when you
-            run hiya() will it run and print to the console.</li>
-        <li>ES6 JS allows for default parameters to use a default value if called without that parameters
-            <br>ex: function hiya(name = 'mystery person'){ console.log('Hiya ' + name)} will print to the console 'Hiya
-            nameOfPerson' or if called just
-            hiya() without arguments, it will print 'Hiya mystery person'
-        </li>
-        <li>Functions being called within other functions to make code more readable are known as 'helper functions'
-            since each function is carrying out a specific task.. Writing helper functions can break down large complex
-            tasks into smaller pieces
-        </li>
-        <li>Functions can be anonymous, given no name to run just a code block with the function keyword OR
-            Function expressions can be used in which a variable (usually declared with const) can be used to call the
-            function in the future
-        </li>
-        <li>Pass by reference is when you pass in an array variable into a function, and it changes outside the function
-            (mutates) because when you pass it into a function, you're actually passing a reference to where the
-            variable memory is stored and then changing the variable memory
-        </li>
-        <li>If you try to go to an array index that is out of bound in JS, it will show you that element is undefined
-        </li>
-        <li>
-            To make an object literal in JS, you assign a variable with curly braces
-            <br>Ex: let objectVariable = {} creates an empty object
-        </li>
-        <li>
-            Data in objects is stored in unordered key: value pairs.. The key is an identifier, which is a string but if
-            there are no special characters in the key then the quotation marks can be omitted.. A property of an object
-            is a key: value pair together
-        </li>
-        <li>Object properties are separated by commas</li>
-        <li>If you try to access an Object property that does not exist, you will get back undefined</li>
-        <li>To access an Object property that has numbers, spaces, special characters, or variables, required to use
-            bracket
-            notation instead of dot notation for properties</li>
-        <li>An object declared with const can't be reassigned, but its properties can be mutated or re-assigned</li>
-        <li>The delete operator will let you remove properties from objects and assignment operator can be used to add
-            new properties or change properties
-            <br>Ex: delete objectName.propertyName</li>
-        <li>
-            Object methods can be used as a key in an object with the value being an anonymous function to do the action
-            and is just called by the key name, or the colon can be skipped along with the function keyword
-            <br>Ex: objectName { methodName : function(){ console.log('This is what objectName.methodName() does') } }
-            <br>Ex 2: objectName { methodName() { console.log('This is the alternate way of using methods in ES6') } }
-        </li>
-        <li>In JS, object methods do not automatically have access to the other properties of the method, must use
-            'this' keyword for them to get access</li>
-        <li>Avoid using arrow functions within objects using the 'this' keyword since the arrow syntax automatically
-            bind an already defined this keyword to the function that is not calling the object, it uses a global object
-            already defined and thus does not have the same properties as the object you're in</li>
-        <li>JS does not come with privacy built in mind to tell people not to change variables/properties, so a practice
-            many developers do is prepending variables that should be unmutable with an underscore at the beginning (let
-            _dontTouch), which does not inherently keep people from changing them but does serve as a warning that it
-            should be private</li>
-        <li>Using a getter in JS is creating a method with the 'get' keyword, then inside the method block you can add
-            conditionals to return various results based on inputs of a property. The 'getter property' cannot share the
-            same name as an actual property within the object, and when you call the getter it looks like you're calling
-            a property itself since you don't include parentheses but it gives a fully formatted response
-            <br>Ex: let objectVar = { _dontTouch : 'How dare you!', get noTouchy(){ if(this._dontTouch === 'How dare
-            you!'){ return 'No touchy!'} else{ return 'Someone touched the object properties!!!!!' } } }
-            <br>And when called: objectVar.noTouchy will return 'No touchy!'
-        </li>
-        <li>A factory function lets us quickly make copies of objects with different parameters to make multiple
-            instances of that object easily and quickly.
-            <br>Ex: const objFactory = (parameterName1, parameterName2) => { return { parameterName1: parameterName1,
-            parameterName2: parameterName2} }
-            <br>Instance of objFactory: const newObj = objFactory(prop1, prop2);</li>
-        <li>You can also use property value shorthand to save yourself writing
-            <br>The above obj can be written: const objFactory = (parameterName1, parameterName2) => { return {
-            parameterName1, parameterName2} }
-        </li>
-        <li>Destructured assignment allows you to use an object's key as a variable name and assign the variable from
-            the object
-            <br>Ex: const {residence} = vampire creates a variable residence and assigns it the property value of
-            vampire.residence
-        </li>
-        <li>A predicate function is one that returns a boolean value</li>
-        <li>"git init" is used to initialize a new git repository</li>
-        <li>"git status" shows which branch you're on and which files git sees but is not tracking</li>
-        <li>"git add [filename]" adds the file to the staging area, or use a "." instead of filename to add all files in
-            the working directory</li>
-        <li>"git diff [filename]" is used to show the difference in the file currently from what's stored in Git... The
-            white text is what matches in Git, the red text is what used to be in the file, the green text is what was
-            added to the file since the last commit
-        </li>
-        <li>'git commit -m "Commit message"' commits the changes in the staging area to the Git repository, should be in
-            present tense, quotation marks, and under 50 characters</li>
-        <li>The commit you are currently on is known as the HEAD commit, it's often the commit with the most recent
-            changes</li>
-        <li>The command "git show HEAD" will show your HEAD commit plus all file changes that were committed</li>
-    </ul>
+    <main>
+        <h1 align="center">HTML Tags and Tips</h1>
+        <ul>
+            <li>H heading tags range from h1-h6 (h1 is largest, h6 is smallest)
+            </li>
+            <li>Img tags need an src="" and are self-closing, an alt attribute must be set for accessibility</li>
+            <li>Video tags are not self-closing, the text in the middle is displayed if the
+                video cannot render, you can specify the src="" of the video, you can adjust the width and height
+                and if you add the 'controls' attribute in the tag it will give you options to play and pause
+            </li>
+            <li>!DOCTYPE html at the top of page lets html know to render most recent html</li>
+            <li>Anchor tags (a) can be set around any other tags, just add href="" and either the relative
+                (./filename.html)
+                or absolute file path of the link... and target="_blank" can be specified if you want it to open in a
+                new
+                tab
+            </li>
+            <li>Em tag is to <em>italicize</em> words, <strong>strong tag is to bold them</strong></li>
+            <li>To link to other parts of same page, giv e the tag you want to link to an ID, then in the Anchor
+                tag use href="#idHere"
+            </li>
+            <!--This practice page is helpful-->
+            <li>Comments are added in html by typing ">!--" to open the comment (only with an opening bracket) and
+                using "-->" to end the comment
+            </li>
+            <li>The difference between >b> tags and >strong> is b bolds and strong emphasizes important content</li>
+            <li>Diff between >i> and >em> tags is i italicizes and em emphasizes important content</li>
+            <li>Sub tag creates a <sub>subscript</sub>, sup tag creates a <sup>superscript</sup></li>
+            <li>To create a strikethrough, you can use <del>del</del> or <strike>strike</strike></li>
+            <li>The Ins tag will <ins>create an inserted look</ins></li>
+            <li>There's also a <big>big tag</big> and a <small>small tag</small></li>
+            <li>To add new lines or spacing, add the >br /> tag; to add a visible line to separate distinct content
+                add an >hr /> tag
+            </li>
+            <li>Rather than typing <strong> document.querySelector() </strong> to select an element, you can
+                type<strong>$()</strong>.
+                This syntax is inspired by jQuery, but it's not actually jQuery. It's just an alias for
+                document.querySelector()</li>
+            <li>Using string literals (`Back ticks`) is known as string interpolation in JS</li>
+            <li>The not operator (!) is also known as the Bang operator in JS</li>
+            <li>The dot operator is used for methods/properties (string.length, Math.random()) in JS</li>
+            <li>Short-circuit assignment is when you have an OR conditional and it only assigns the right side if the
+                left
+                side of the conditional is False or a Falsy value <br>(ex: let name = variableName || 'default'... name
+                will
+                be
+                set to 'default' only if variableName is a Falsy value, either undefined or an empty string, otherwise
+                name
+                will be set to the value of variableName) in JS
+            </li>
+            <li>The ternary operator is a simplified way of writing if..else statements.. in them, the conditional
+                statement
+                is first then a question mark is used and two expressions follow which are separated by a semi-colon
+                <br>(ex: conditionalStatement ? console.log("Prints If Conditional Is True") : console.log("Prints If
+                False"); )</li>
+            <li>Hoisting is the ability of JS to call functions in a program before they're actually defined, but it is
+                not
+                considered good practice. Good practice is functions defined at the top before usage.. Hoisting works
+                because variable and function definitions stay in memory during the compile phase, so during execution
+                they
+                already exist... Only declarations are hoisted, not initialization if that is done separately so if you
+                declare a variable without initializing it, it will be undefined until the part of the code that
+                initializes
+                it.. Also only declarations using var are hoisted, not those using let or const</li>
+            <li>Defining a function does not actually execute the function, only calling the function does that.
+                <br>ex: function hiya(){ console.log('Hiya!') } will not print to the console automatically. Only when
+                you
+                run hiya() will it run and print to the console.</li>
+            <li>ES6 JS allows for default parameters to use a default value if called without that parameters
+                <br>ex: function hiya(name = 'mystery person'){ console.log('Hiya ' + name)} will print to the console
+                'Hiya
+                nameOfPerson' or if called just
+                hiya() without arguments, it will print 'Hiya mystery person'
+            </li>
+            <li>Functions being called within other functions to make code more readable are known as 'helper functions'
+                since each function is carrying out a specific task.. Writing helper functions can break down large
+                complex
+                tasks into smaller pieces
+            </li>
+            <li>Functions can be anonymous, given no name to run just a code block with the function keyword OR
+                Function expressions can be used in which a variable (usually declared with const) can be used to call
+                the
+                function in the future
+            </li>
+            <li>Pass by reference is when you pass in an array variable into a function, and it changes outside the
+                function
+                (mutates) because when you pass it into a function, you're actually passing a reference to where the
+                variable memory is stored and then changing the variable memory
+            </li>
+            <li>If you try to go to an array index that is out of bound in JS, it will show you that element is
+                undefined
+            </li>
+            <li>
+                To make an object literal in JS, you assign a variable with curly braces
+                <br>Ex: let objectVariable = {} creates an empty object
+            </li>
+            <li>
+                Data in objects is stored in unordered key: value pairs.. The key is an identifier, which is a string
+                but if
+                there are no special characters in the key then the quotation marks can be omitted.. A property of an
+                object
+                is a key: value pair together
+            </li>
+            <li>Object properties are separated by commas</li>
+            <li>If you try to access an Object property that does not exist, you will get back undefined</li>
+            <li>To access an Object property that has numbers, spaces, special characters, or variables, required to use
+                bracket
+                notation instead of dot notation for properties</li>
+            <li>An object declared with const can't be reassigned, but its properties can be mutated or re-assigned</li>
+            <li>The delete operator will let you remove properties from objects and assignment operator can be used to
+                add
+                new properties or change properties
+                <br>Ex: delete objectName.propertyName</li>
+            <li>
+                Object methods can be used as a key in an object with the value being an anonymous function to do the
+                action
+                and is just called by the key name, or the colon can be skipped along with the function keyword
+                <br>Ex: objectName { methodName : function(){ console.log('This is what objectName.methodName() does') }
+                }
+                <br>Ex 2: objectName { methodName() { console.log('This is the alternate way of using methods in ES6') }
+                }
+            </li>
+            <li>In JS, object methods do not automatically have access to the other properties of the method, must use
+                'this' keyword for them to get access</li>
+            <li>Avoid using arrow functions within objects using the 'this' keyword since the arrow syntax automatically
+                bind an already defined this keyword to the function that is not calling the object, it uses a global
+                object
+                already defined and thus does not have the same properties as the object you're in</li>
+            <li>JS does not come with privacy built in mind to tell people not to change variables/properties, so a
+                practice
+                many developers do is prepending variables that should be unmutable with an underscore at the beginning
+                (let
+                _dontTouch), which does not inherently keep people from changing them but does serve as a warning that
+                it
+                should be private</li>
+            <li>Using a getter in JS is creating a method with the 'get' keyword, then inside the method block you can
+                add
+                conditionals to return various results based on inputs of a property. The 'getter property' cannot share
+                the
+                same name as an actual property within the object, and when you call the getter it looks like you're
+                calling
+                a property itself since you don't include parentheses but it gives a fully formatted response
+                <br>Ex: let objectVar = { _dontTouch : 'How dare you!', get noTouchy(){ if(this._dontTouch === 'How dare
+                you!'){ return 'No touchy!'} else{ return 'Someone touched the object properties!!!!!' } } }
+                <br>And when called: objectVar.noTouchy will return 'No touchy!'
+            </li>
+            <li>A factory function lets us quickly make copies of objects with different parameters to make multiple
+                instances of that object easily and quickly.
+                <br>Ex: const objFactory = (parameterName1, parameterName2) => { return { parameterName1:
+                parameterName1,
+                parameterName2: parameterName2} }
+                <br>Instance of objFactory: const newObj = objFactory(prop1, prop2);</li>
+            <li>You can also use property value shorthand to save yourself writing
+                <br>The above obj can be written: const objFactory = (parameterName1, parameterName2) => { return {
+                parameterName1, parameterName2} }
+            </li>
+            <li>Destructured assignment allows you to use an object's key as a variable name and assign the variable
+                from
+                the object
+                <br>Ex: const {residence} = vampire creates a variable residence and assigns it the property value of
+                vampire.residence
+            </li>
+            <li>A predicate function is one that returns a boolean value</li>
+            <li>"git init" is used to initialize a new git repository</li>
+            <li>"git status" shows which branch you're on and which files git sees but is not tracking</li>
+            <li>"git add [filename]" adds the file to the staging area, or use a "." instead of filename to add all
+                files in
+                the working directory</li>
+            <li>"git diff [filename]" is used to show the difference in the file currently from what's stored in Git...
+                The
+                white text is what matches in Git, the red text is what used to be in the file, the green text is what
+                was
+                added to the file since the last commit
+            </li>
+            <li>'git commit -m "Commit message"' commits the changes in the staging area to the Git repository, should
+                be in
+                present tense, quotation marks, and under 50 characters</li>
+            <li>The commit you are currently on is known as the HEAD commit, it's often the commit with the most recent
+                changes</li>
+            <li>The command "git show HEAD" will show your HEAD commit plus all file changes that were committed</li>
+            <li>"git checkout HEAD [filename]" will reset the file in working directory back to last commit status</li>
+            <li>"git reset HEAD [filename]" will unstage file changes that have been added to the staging area (by 'git
+                add
+                [filename]')</li>
+            <li>"git reset commit_SHA" will let you go back to a certain commit (based on 1st 7 digits of the SHA that
+                can
+                be found by running 'git log')</li>
+            <li>Semantic HTML includes >header>, >nav>, >main>, >footer>, >section>, >article>, and >aside> to help
+                accessibility and clarity of the document, >section> is used for anything that can be grouped together
+                whereas >article> is used for standalone articles/comments and >aside> is used for information that
+                isn't
+                directly related but extra information</li>
+            <li>>Figure> tag can be used to surround an img tag to make it more semantically understandable to screen
+                readers, and you can also use >figcaption> to surround any text that accompany the picture</li>
+            <li>>Embed> is a tag that used to be used for images, videos, and audio, but now it's better to use those
+                tags
+                since Embed is used only for legacy support</li>
+            <li>For audio and video tags, you can add a "controls" attribute so there will be a play button, fast
+                forward
+                and backwards.. other attributes are "autoplay" or "loop", source within those can be used as an
+                attribute
+                (src) or a standalone tag inside of (source)</li>
+            <li>The progress tag contains attributes of Max, Min, and Value and will display a progress bar</li>
+            <li>To add inline css, you add a "style" attribute to an HTML tag and within the quotes specify the style
+                you want making sure to end with a semi-colon
+                <br>Ex: >h1 style="color:blue; background-color: navy;"> would make that h1 have a blue color with navy
+                background</li>
+            <li>Another option to add CSS is to add a >style> tag to the head tag of the file and put your css there
+            </li>
+            </li>
+            <li>But the preferred way of adding css is to link to a css file by adding a >link> tag with href attribute
+                of the file path, type="text/css", rel="stylesheet"</li>
+            <li>CSS can use tag names (p), class names (.class), or id names (#id) as selectors for styling</li>
+            <li>In HTML, you can add multiple classes to the same tag by adding a space between classes</li>
+            <li>Ids are the most specific CSS selector so they override other styles, then classes, and least specific
+                are tag names</li>
+            <li>You can chain CSS selectors by using tagName.className (ex: li.html would get all list elements with a
+                class name of "html" and style them while ignoring other list elements and ignoring other non-list
+                elements with a class of "html")</li>
+            <li>In addition to chaining CSS selectors, you can also nest them (such as: aside ul{} would style only the
+                unordered list that is nested within an aside element such as my Further Learning Links at the bottom of
+                the page)</li>
+            <li>To give two or more selectors the same styling, you can separate them with a comma</li>
+        </ul>
+    </main>
     <br>
     <hr />
-    <h2>About Me</h2>
-    <p>I like learning to code since the logic makes sense and the puzzle of it holds my interest.
-        I believe in the power of technology to make a difference in peoples' learning
-        to make a better life for themselves.
-    </p>
+    <article>
+        <h2>About Me</h2>
+        <p>I like learning to code since the logic makes sense and the puzzle of it holds my interest.
+            I believe in the power of technology to make a difference in peoples' learning
+            to make a better life for themselves.
+        </p>
+    </article>
+    <article>
+        <h3>Codecademy Progress</h3>
+        <progress value="8" max="42">Ch. 8</progress>
+        <sub>17% as of 11/29/2020</sub>
+        <p>Ch. 8: Web Development Fundamentals (out of 42)
+        </p>
+    </article>
 
-    <h3>Further Research for Me to Learn</h3>
-    <ul>
-        <li><a href="https://docs.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial"
-                target="_blank">Learn About Docker-- Tutorial and Building Container from Scratch Video</a></li>
-        <li><a href="https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504"
-                target="_blank">Kernel Space Article</a></li>
-        <li><a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank">Git Cheat Sheet of
-                Commands</a></li>
-        <li><a href="https://thoughtbot.com/upcase/mastering-git" target="_blank">Git Video Walkthroughs/ Tutorial
-                Lessons</a></li>
-    </ul>
+    <aside>
+        <h3>Further Research for Me to Learn</h3>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial"
+                    target="_blank">Learn About Docker-- Tutorial and Building Container from Scratch Video</a></li>
+            <li><a href="https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504"
+                    target="_blank">Kernel Space Article</a></li>
+            <li><a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank">Git Cheat Sheet of
+                    Commands</a></li>
+            <li><a href="https://thoughtbot.com/upcase/mastering-git" target="_blank">Git Video Walkthroughs/ Tutorial
+                    Lessons</a></li>
+            <li><a href="https://lab.github.com/" target="_blank">Github Training Lab Bot</a></li>
+            <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown
+                    Cheat
+                    Sheet</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-"
+                    target="_blank">YouTube
+                    Git Tutorials</a></li>
+            <li><a href="https://www.internetingishard.com/html-and-css/" target="_blank">Interneting Is Hard-- HTML and
+                    CSS
+                    Book</a></li>
+        </ul>
+    </aside>
 </body>
 
 </html>

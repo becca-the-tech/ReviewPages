@@ -10,17 +10,32 @@
             font-weight: bold;
         }
 
+        section {
+            padding: 2% 4%;
+            border: 2px dotted black;
+            opacity: 0.7;
+        }
+
         #codecademyProjects {
             background-color: springgreen;
-            opacity: 0.75;
         }
 
         #selfProjects {
             background-color: pink;
+            border-top: none;
+            border-bottom: none;
         }
 
         #tutorialProjects {
             background-color: lightskyblue;
+        }
+
+        h2 {
+            color: #000050;
+        }
+
+        nav ul {
+            list-style-type: none;
         }
     </style>
 
@@ -59,8 +74,27 @@
                     <li>creditCardChecker.js: Takes in arrays of Credit Card Numbers and checks them for validity using
                         the Luhn algorithm, then takes an array of both valid and invalid credit card numbers to find
                         only the invalid ones and returns a list of companies that were found with invalid cards</li>
+                    <li>mysteriousOrganism.js: An object of a strange organism that can have one of its bases mutated at
+                        random and that has greater survivability when 'G' and 'C' bases are over 60%, so creates an
+                        array of 30 creatures based upon their isLikelyToSurvive() method</li>
+                </ul>
+                <li class="chapter">Ch. 7- Mixed Messages Project</li>
+                <ul>
+                    <li>mixedMessages.js: a small project that takes in encouraging quotes by various authors and
+                        outputs a random quote every time the program is run.</li>
                 </ul>
                 <li class="chapter">Ch. 8- Web Development Intro (HTML and CSS) Projects</li>
+                <ul>
+                    <li>fashionBlog.html: a beginner html project, adds images, videos, and headings/lists</li>
+                    <li>newYorkCityBlog.html: a project for practicing semantic HTML with main, nav, section, article,
+                        figures and figcaptions</li>
+                    <li>healthyRecipes.html: beginner project creating CSS rule sets</li>
+                    <li>oliviaPortfolio.html: early CSS project changing background image and color and using opacity
+                    </li>
+                    <li>DasmotosArtsAndCrafts.html: a simple website based upon a <a
+                            href="https://content.codecademy.com/courses/freelance-1/unit-2/dasmotos-arts_redline.jpg"
+                            target="_blank">specification page</a> that was given to guide the work</li>
+                </ul>
             </ul>
         </section>
         <section id="selfProjects">
@@ -68,10 +102,23 @@
             <ul>
                 <li>calendar.html: a calendar created from HTML tables for November and December, along with lists of
                     goals and a small form to log goal information</li>
+                <li>bookFactoryCalculations.js: a program to store book information (title, author, audiobook time,
+                    number of pages, and --if a library book-- the return date) and then calculate percent done with the
+                    book from audiobook time or current page number. Also can calculate amount needed to finish a book
+                    before a library return date or a specific goal date, specifying either audio minutes or pages to
+                    read a day.</li>
+                <li>reviewPages.html: a long list of notes I'm recording on HTML, CSS, JS, and Git... eventually I will
+                    go through and format my notes and separate them into a more readable file... Also has a little
+                    progress bar tracker for my Codecademy progress and a list of articles/tutorials to return to when I
+                    have more time or more understanding</li>
             </ul>
         </section>
         <section id="tutorialProjects">
             <h2>Tutorial Projects</h2>
+            <ul>
+                <li>toDo List Tutorial: followed this YouTube tutorial to create a ToDo List with just vanilla JS, CSS,
+                    and HTML and using local storage and Font-Awesome icons</li>
+            </ul>
         </section>
     </main>
 </body>

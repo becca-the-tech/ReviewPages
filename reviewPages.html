@@ -262,6 +262,38 @@
                 <br>Ex: h2 { position: relative; left: 15px; top: 15px} the h2 element would be moved to the right and
                 bottom 15px from where it normally would be
             </li>
+            <li>Color can be defined using specific color words like 'aqua' or 'rebeccapurple', or with Hex Values like
+                #AB00FF, or with rgb(255,0,0) or hsl(360, 100%, 100%)</li>
+            <li>rgb colors and hsl colors can add a fourth part the alpha value (by using rgba or hsla) at the end to
+                measure opacity (0 being transparent, 1 being opaque-- not see through)</li>
+            <li>Font-weight values can be 'bold' or 'normal' or you can use numeric values between 100 and 900 ('400' is
+                the default value, '700' signifies a bold weight, '300' is a light weight)</li>
+            <li>Font-style property can be set to either 'italic' or 'normal'</li>
+            <li>'Word-spacing' is a property that adds to the space between words, often to make bold text more
+                readable, can be set to 'normal' or use an 'em' value that uses the base amount of word-spacing for that
+                font (typically 0.25em) and adds the value to that default
+                <br>Ex: p {word-spacing: 0.2em} would give paragraphs a word-spacing of 0.45em
+            </li>
+            <li>'letter-spacing' can also be defined as a CSS property, the technical term for adjusting space between
+                letters is <em>tracking</em>, not commonly used but sometimes helpful to enhance readability of
+                uppercase words</li>
+            <li>'line-height' is used to adjust the <em>leading</em> between lines (the amount of space between them),
+                can be used with units like %, px, em, or rem or can be unitless and adjusts as a ratio of the default
+                value, generally preferable to use a unitless ratio so it automatically adjusts</li>
+            <li>serif fonts have extra details at the ends of letters (like 'Times New Roman' or 'Georgia'), typically
+                they were used in print designs since they are considered more readable in long paragraphs of text</li>
+            <li>'sans serif' fonts lack extra strokes and letters have straight flat edges that give a cleaner more
+                modern look (like 'Arial' or 'Helvetica'), since screens often have lower resolution than print sans
+                serif fonts may be easier to read</li>
+            <li>'fallback fonts' can be specified within a font-family rule, so that if a browser does not have a
+                particular type of font available they will try the next one
+                <br>Ex: p {font-family: 'Garamond', 'Times', serif;} The font-family will try to display a Garamond font
+                and if that isn't available it will use Times, and if Times isn't available it will use any serif font
+                preinstalled on the computer</li>
+            <li>You can link external fonts, such as ones from <a href="https://fonts.google.com/"
+                    target="_blank">Google Fonts</a></li>
+            <li>Images can be turned into a circular image instead of square by giving them the 'border-radius' property
+                set to the value of '100%'</li>
         </ul>
     </main>
     <br>

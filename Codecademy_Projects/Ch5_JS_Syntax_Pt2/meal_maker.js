@@ -78,16 +78,19 @@ const menu = {
 menu.addDishToCourse('appetizers', 'Mozzarella Sticks', 7.99);
 menu.addDishToCourse('appetizers', 'Loaded Fries', 9.99);
 menu.addDishToCourse('appetizers', 'Pretzel Bites', 5.99);
+menu.addDishToCourse('appetizers', 'Chicken Wings', 6.99);
 
 //adds mains to menu
 menu.addDishToCourse('mains', 'Chicken Alfredo Pasta', 13.99);
 menu.addDishToCourse('mains', 'Pepperoni Pizza', 15.99);
 menu.addDishToCourse('mains', 'Caesar Salad', 7.99);
+menu.addDishToCourse('mains', 'Chicken Wings', 10.99);
 
 //adds desserts to menu
 menu.addDishToCourse('desserts', 'Pizookie', 4.99);
 menu.addDishToCourse('desserts', 'Chocolate Lava Cake', 5.99);
 menu.addDishToCourse('desserts', 'Oreo Cheesecake', 8.99);
+menu.addDishToCourse('desserts', 'Latte', 3.99);
 
 //generates the meal and logs to console
 let meal = menu.generateRandomMeal();

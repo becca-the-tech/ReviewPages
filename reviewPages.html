@@ -118,6 +118,35 @@
                     (src) or a standalone tag inside of (source)</li>
                 <li>The progress tag contains attributes of Max, Min, and Value and will display a progress bar</li>
                 <li>In HTML, you can add multiple classes to the same tag by adding a space between classes</li>
+                <li>The 'scope' attribute can be added to a 'th' tag (table heading tag) to distinguish if the heading
+                    is for a 'row' or for a 'col' (column)</li>
+                <li>'colspan' and 'rowspan' can be attributes of 'td' (table data tags) to indicate a piece of data
+                    spans (goes across) more than 1 column or row</li>
+                <li>When creating a form, you should include action="urlOfInfoGoingTo" and method="POST/GET/ETC" within
+                    the form tag</li>
+                <li>Input tags should have a 'name' attribute (the items in the form are submitted with
+                    'nameOfInput'='valueGiven') and a 'type' attribute of what kind of input is expected,
+                    can also have a 'required' attribute if necessary for form submission, 'value' attribute for form to
+                    be pre-filled, and an 'id' attribute preferably</li>
+                <li>When adding a 'label' tag to give the user a description of an input, use the 'for' attribute by
+                    matching it to the input's 'id' attribute; clicking on a label will focus the input box</li>
+                <li>An input type='password' would use asterisks or periods to obscure what was typed although when sent
+                    to the form it still is formatted in plaintext</li>
+                <li>An input type='range' creates a slider which you can add 'min', 'max', and 'step' values to</li>
+                <li>Input type='checkbox' creates a clickable box, which can be distinguished from related options by
+                    giving each checkbox a different value and id even though their name may be the same</li>
+                <li>Input type='radio' gives radio buttons, use the same name attribute for related radio buttons but
+                    different values and ids</li>
+                <li>A select tag can enclose option tags that are set to particular values (and the label is between the
+                    opening and closing option tag to be displayed to users) to make the user choose one from a list
+                </li>
+                <li>A datalist tag gives the user options to choose from or lets the user type in their own choice if
+                    they prefer by having the 'datalist id="idHere"' and the input tag having the 'list="idHere"
+                    attribute to match, and no data needs to be between the opening and closing option tags</li>
+                <li>The 'textarea' tag has opening and closing tags, and you can specify number of 'cols' and 'rows'
+                </li>
+                <li>Input type='submit' creates a button with the text of whatever is assigned to the 'value' attribute,
+                    if no value it shows 'Submit'</li>
             </ul>
         </div>
 
@@ -459,9 +488,12 @@
     </article>
     <article>
         <h3>Codecademy Progress</h3>
-        <progress value="8" max="42">Ch. 8</progress>
-        <sub>17% as of 11/29/2020</sub>
-        <p>Ch. 8: Web Development Fundamentals (out of 42)
+        <progress value="10" max="42">Ch. 10</progress>
+        <sub>24% as of 12/12/2020</sub>
+        <p>Ch. 10: Web Development Fundamentals (out of 42)
+        </p>
+        <p>Past Log:
+            <br>17% as of 11/29/2020
         </p>
     </article>
 

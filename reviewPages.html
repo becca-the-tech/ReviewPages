@@ -4,8 +4,30 @@
 <head>
     <title>My Pretty Practice Page</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            float: left;
+            margin: 10px;
+        }
+
         li {
             line-height: 1.5;
+        }
+
+
+        header nav {
+            padding-top: 20px;
+            background-image: linear-gradient(90deg, teal, rgba(75, 49, 183, 0.3));
+            text-align: left;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin-bottom: 20px;
         }
 
         div {
@@ -35,8 +57,8 @@
 </head>
 
 <body>
-    <img src="./email_plant.JPG" alt="Becca with a wired plant" width="10%" height="150px" />
     <header>
+        <img src="./email_plant.JPG" alt="Becca with a wired plant" width="10%" height="150px" />
         <nav>
             <h3>Other Articles by Becca</h3>
             <ul>
@@ -147,6 +169,17 @@
                 </li>
                 <li>Input type='submit' creates a button with the text of whatever is assigned to the 'value' attribute,
                     if no value it shows 'Submit'</li>
+                <li>Adding a 'required' attribute to a form element prevents form from submitting without an input
+                    selected</li>
+                <li>For number inputs, you can add 'min' and 'max' attributes.. for text inputs, you can add 'minlength'
+                    and/or 'maxlength' attributes as client-side validation</li>
+                <li>When linking JS, you can add a "defer" attribute to the script tag if the JS file requires
+                    interaction through the DOM, that way the HTML parser doesn't hold up loading the page while the
+                    script tag loads.. it specifies scripts should execute after the HTML file is completely parsed</li>
+                <li>The 'async' attribute in JS script files means the file is loaded in the background while the HTML
+                    parser continues loading the page, and as soon as it is done downloading it executes the script,
+                    async loading optimizes web page load time so it's most suitable if it doesn't matter at which point
+                    the script file is executed</li>
             </ul>
         </div>
 

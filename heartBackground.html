@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 100vh
+        }
+
+        p {
+            text-align: center;
+            font-size: 8vw;
+            color: darkmagenta;
+            top: 30%;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <img src="normal.png" id="myImage">
+        <p onclick="blooming()" id="word">Click for a secret message</p>
+    </section>
+
+    <!-- Paste your code in the script element below:  -->
+    <script>
+        function blooming() {
+            let image = document.getElementById('myImage');
+            let word = document.getElementById('word');
+
+            if (image.src.match("normal")) {
+                image.src = "hearts.png";
+                word.style = "color: rebeccapurple";
+                word.innerHTML = "Becca loves to code";
+            } else {
+                image.src = "normal.png";
+                word.style.color = "lavender";
+                word.innerHTML = "Becca creates things";
+            }
+        }
+    </script>
+</body>
+
+</html>

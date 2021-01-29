@@ -304,6 +304,53 @@
                 <li>Box-sizing can also be set to 'border-box' which will take padding and extra into the overall size
                     of
                     the box instead of adding to it</li>
+                <li>Transform property can be set to scale to increase the base size of an element<br>
+                    Ex: p { transform: scale(2); } will double the size of p elements</li>
+                <li>Transform property can also be set to skewX or skewY where you specify the number of degrees it
+                    should be skewed <br>
+                    Ex: div { transform: skewX(45deg); } would skew it at a 45 degree angle</li>
+                <li>Background property can be set to 'linear-gradient(gradientDirectionDegrees, color1, color2,
+                    color3,..)' to show a gradual shifting of colors, 45deg is a diagonal gradient, 90 degree is
+                    horizontal (from left to right), 180 deg is vertical (top to bottom changing colors)</li>
+                <li>"Display: flex" will make any child containers flexbox containers but they will still be block
+                    containers unless you use "display: inline-flex"</li>
+                <li>"justify-content" is a flexbox property for flexbox containers that can be set to align items
+                    horizontally within their
+                    container, it can be set to "flex-start" which starts on the left, "flex-end" which lines the last
+                    up with the right side, "center" which puts them in the center, "space-around" which positions boxes
+                    with equal space around each side including for the first and last boxes, and "space-between" which
+                    uses equal space between each box but the first and last box are aligned with the edges</li>
+                <li>"align-items" is a flexbox property for flexbox containers that will align items vertically, the
+                    values it can take are:
+                    "flex-start" which positions elements at the top of the parent container, "flex-end" which positions
+                    elements at the bottom of their parent container, "center" which positions elements between the top
+                    and bottom, "baseline" which positions the elements so that the bottom of the content of all items
+                    will be aligned, or "stretch" which is the default value and all except items with a defined height
+                    will stretch from top to bottom of the container</li>
+                <li>"flex-grow" is a property applied to flex-items that lets them grow if their parent container has
+                    extra room and says proportionally how items should grow compared to other items (so an item with
+                    "flex-grow: 2" can grow twice as much as "flex-grow: 1" items); the default property of flex-grow is
+                    0
+                </li>
+                <li>"flex-shrink" is also applied to flex-items and the default is 1; it lets items shrink to fit a
+                    parent container and are declared proportionally like flex-grow above</li>
+                <li>"flex-basis" is a flex-item property that allows us to set the width of an item before it is grown
+                    or shrunk</li>
+                <li>The "flex" property (not to be confused with the flex value of display property-- display: flex) can
+                    be used to declare flex-grow, flex-shrink, and flex-basis all on one line (Ex: "flex: 2 1 100px"
+                    would set flex-grow: 2, flex-shrink: 1, flex-basis: 100px)</li>
+                <li>"flex-wrap" is a property for flex containers, its value can be "wrap" telling child items that
+                    don't fit in the row to go to the next line, "wrap-reverse" (does same thing as wrap, but the items
+                    are reversed), "nowrap" prevents wrapping and is the set default</li>
+                <li>"align-content" is for flex-containers that have multiple rows of content, whereas align-items is
+                    for one row</li>
+                <li>flex containers have two axes: a main axis and a cross axis; by default, the main axis is horizontal
+                    and the cross axis is vertical</li>
+                <li>"flex-direction" property can take four values, "row" (default), "row-reverse" positions items from
+                    right to left, "column" positions items vertically from top to bottom, "column-reverse" positions
+                    items from bottom to top</li>
+                <li>"flex-flow" is a property for flex containers to declare 'flex-direction' and 'flex-wrap' together
+                    in one line (Ex: flex-flow: column wrap;)</li>
             </ul>
         </div>
 

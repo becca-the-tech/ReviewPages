@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <title>When I'm grumpy</title>
+</head>
+
+<body>
+    <h1>Why People Should Respect Each Other</h1>
+    <ul>
+        <li>PEOPLE > items</li>
+        <li>Because we're all people</li>
+        <li>Emotions are temporary, people matter more</li>
+        <li>Tantrums help nothing</li>
+        <li>Just because you aren't getting your way doesn't mean I don't care</li>
+        <li>We don't know what others are going through</li>
+    </ul>
+
+    <hr>
+
+    <h2>Why I code</h2>
+    <ul>
+        <li>Financial stability</li>
+        <li>Help others and solve problems</li>
+        <li>Education for all</li>
+        <li>Continuous learning</li>
+        <li>Job that care with actual perks</li>
+    </ul>
+
+    <hr>
+
+    <form action="" method="GET">
+        <label>Daily Check In: </label><input type="text" name="checkIn" id="checkIn"><br><br>
+        <label>Tell Me All About It: </label><br>
+        <label>Mad</label><input type="checkbox" name="emotions" id="emotions" value="mad">
+        <label>Happy</label><input type="checkbox" name="emotions" id="emotions" value="happy">
+        <label>Annoyed</label><input type="checkbox" name="emotions" id="emotions" value="annoyed">
+        <label>Sad</label><input type="checkbox" name="emotions" id="emotions" value="sad">
+        <label>Content</label><input type="checkbox" name="emotions" id="emotions" value="content">
+        <label>Joyful</label><input type="checkbox" name="emotions" id="emotions" value="joyful">
+        <br><br>
+
+
+        <button id="mad">Grumpy</button>
+        <button id="happy">Happy</button>
+        <input type="submit" id="codeMoreButton" value="Code More">
+    </form>
+
+    <script>
+        let madButton = document.getElementById("mad");
+        let happyButton = document.getElementById("happy");
+        let codeButton = document.getElementById("codeMoreButton");
+
+        madButton.addEventListener("click", function() {
+            let options = ["Don't be mad, get happy!", "Don't let the rude people get you down.", "Breathe and remember you aren't in control of other peoples' emotions, only your own.", "You're doing just fine, you're helping people, it's okay."];
+            options.push("Use these lessons as a reminder to your future self.")
+            options.push("More motivation, stay focused!")
+            let random = Math.floor(Math.random() * options.length);
+
+            alert(options[random]);
+        })
+
+        happyButton.addEventListener("click", function() {
+            alert("See, focus on the happy people. More of them, just shorter calls.")
+        })
+    </script>
+</body>

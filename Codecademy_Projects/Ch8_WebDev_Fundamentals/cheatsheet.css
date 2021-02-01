@@ -1,0 +1,35 @@
+h2 {
+    color: navy;
+    background-color: lightskyblue;
+    font-weight: bold;
+    font-family: cursive;
+  }
+
+  h1{
+    color: cornflowerblue;
+    background-color: black;
+    font-family: cursive;
+  }
+
+  h2.python {
+    background-color: lightpink;
+  }
+
+  table {
+    border: 2px solid navy;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px dotted navy;
+    border-bottom: none;
+    padding: 5px;
+  }
+
+  th {
+    background-color: thistle;
+  }
+
+  .tag {
+    background-color: lavender;
+  }

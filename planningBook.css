@@ -1,0 +1,23 @@
+div {
+    display: inline-flex;
+    min-width: 45%;
+    min-height: 200px;
+  }
+
+  .box {
+    border: 1px solid navy;
+  }
+
+  #personal {
+    padding-right: 5%;
+  }
+
+  h2 {
+    margin-right: 20px;
+  }
+
+  h3 {
+    border: 1px dotted orchid;
+    display: inline;
+    margin-left: 10px;
+  }

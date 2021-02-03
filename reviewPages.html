@@ -41,6 +41,10 @@
             color: thistle;
         }
 
+        aside ul a {
+            color: navy;
+        }
+
         a:hover {
             color: turquoise;
         }
@@ -48,6 +52,11 @@
         main nav {
             margin-bottom: 10px;
             text-align: center;
+        }
+
+        .otherInfo {
+            opacity: 50%;
+            padding: 20px;
         }
 
         body {
@@ -569,48 +578,56 @@
     </main>
     <br>
     <hr />
-    <article>
-        <h2>About Me</h2>
-        <p>I like learning to code since the logic makes sense and the puzzle of it holds my interest.
-            I believe in the power of technology to make a difference in peoples' learning
-            to make a better life for themselves.
-        </p>
-    </article>
-    <article>
-        <h3>Codecademy Progress</h3>
-        <progress value="10" max="42">Ch. 11</progress>
-        <sub>27% as of 12/20/2020</sub>
-        <p>Ch. 10: Web Development Fundamentals (out of 42)
-        </p>
-        <p>Past Log:
-            <br>24% as of 12/12/2020
-            <br>17% as of 11/29/2020
-        </p>
-    </article>
-
-    <aside>
-        <h3>Further Research for Me to Learn</h3>
-        <ul>
-            <li><a href="https://docs.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial"
-                    target="_blank">Learn About Docker-- Tutorial and Building Container from Scratch Video</a></li>
-            <li><a href="https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504"
-                    target="_blank">Kernel Space Article</a></li>
-            <li><a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank">Git Cheat Sheet of
-                    Commands</a></li>
-            <li><a href="https://thoughtbot.com/upcase/mastering-git" target="_blank">Git Video Walkthroughs/ Tutorial
-                    Lessons</a></li>
-            <li><a href="https://lab.github.com/" target="_blank">Github Training Lab Bot</a></li>
-            <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown
-                    Cheat
-                    Sheet</a></li>
-            <li><a href="https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-"
-                    target="_blank">YouTube
-                    Git Tutorials</a></li>
-            <li><a href="https://www.internetingishard.com/html-and-css/" target="_blank">Interneting Is Hard-- HTML and
-                    CSS
-                    Book</a></li>
-        </ul>
-    </aside>
+    <div>
+        <article class="otherInfo">
+            <h2>About Me</h2>
+            <p>I like learning to code since the logic makes sense and the puzzle of it holds my interest.
+                I believe in the power of technology to make a difference in peoples' learning
+                to make a better life for themselves.
+            </p>
+        </article>
+        <article>
+            <h3>Codecademy Progress</h3>
+            <progress value="11" max="42">Ch. 11</progress>
+            <sub>34% as of 2/3/2021</sub>
+            <p>Ch. 11: Web Development Fundamentals (out of 42)
+            </p>
+            <br>
+            <p>Past Log:
+                <br>34% as of 2/3/2021
+                <br>27% as of 12/20/2020
+                <br>24% as of 12/12/2020
+                <br>17% as of 11/29/2020
+            </p>
+        </article>
+        <br><br>
+        <aside>
+            <h3>Further Research for Me to Learn</h3>
+            <ul>
+                <li><a href="https://docs.microsoft.com/en-us/visualstudio/docker/tutorials/docker-tutorial"
+                        target="_blank">Learn About Docker-- Tutorial and Building Container from Scratch Video</a></li>
+                <li><a href="https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504"
+                        target="_blank">Kernel Space Article</a></li>
+                <li><a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank">Git Cheat Sheet
+                        of
+                        Commands</a></li>
+                <li><a href="https://thoughtbot.com/upcase/mastering-git" target="_blank">Git Video Walkthroughs/
+                        Tutorial
+                        Lessons</a></li>
+                <li><a href="https://lab.github.com/" target="_blank">Github Training Lab Bot</a></li>
+                <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown
+                        Cheat
+                        Sheet</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-"
+                        target="_blank">YouTube
+                        Git Tutorials</a></li>
+                <li><a href="https://www.internetingishard.com/html-and-css/" target="_blank">Interneting Is Hard-- HTML
+                        and
+                        CSS
+                        Book</a></li>
+            </ul>
+        </aside>
+    </div>
 </body>
 
 </html>

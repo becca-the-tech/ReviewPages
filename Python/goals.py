@@ -31,5 +31,5 @@ def encourage():
 
 choose_goals()
 process = input(
-    "What are the next steps for these goals? How do you plan to accomplish them? \n"
+    "What are the next steps for these goals? What is the tiniest possible next step in the right direction? \n"
 )

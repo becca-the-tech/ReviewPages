@@ -4,35 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Basic page</title>
-    <style>
-        header {
-            margin-bottom: 5px;
-            height: auto;
-            width: 100%;
-            background: coral;
-        }
-
-        body>div {
-            height: 300px;
-            width: 50%;
-            float: left;
-            background-color: skyblue;
-        }
-
-        .right {
-            height: 300px;
-            width: 50%;
-            float: right;
-            background-color: plum;
-        }
-
-        footer {
-            border: 1px solid navy;
-            height: auto;
-            width: 100%;
-            background: gray;
-        }
-    </style>
+    <link href="bookBlog.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -40,8 +12,39 @@
         <h1>This is my header section</h1>
     </header>
     <div class="left">
-        Class on the left
+        <h2>Book Navigator</h2>
+        <ul>
+            <li><a href="#rhythmOfWar">Rhythm of War</a></li>
+            <li><a href="#educated">Educated</a></li>
+            <li><a href="#book">Book 3</a></li>
+            <li><a href="#book">Book 4</a></li>
+            <li><a href="#book">Book 5</a></li>
+            <li><a href="#book">Book 6</a></li>
+            <li><a href="#book">Book 7</a></li>
+            <li><a href="#book">Book 8</a></li>
+            <li><a href="#book">Book 9</a></li>
+            <li><a href="#book">Book 10</a></li>
+        </ul>
     </div>
+    <div class="middle">
+        <h2>Book Blog</h2>
+        <h3 id="rhythmOfWar">Rhythm of War</h3>
+        <span>-By Brandon Sanderson, Book 4 of Stormlight Archive</span>
+        <p>Rhythm of War follows the same cast of characters from prior books, this time dealing with Odium and his
+            Fused singers battling with the humans over the Tower. Adolin and Shallan take a group to the honor spren
+            capital to try to convince spren to bond with humans, but instead Adolin is put on trial for the guilt of
+            previous humans in killing their spren. When the Fused take over the Tower, Kaladin has to deal with being
+            one of the only Bridge 4 and Radiants left awake and being without his powers.</p>
+        <h3 id="educated">Educated</h3>
+        <span>-By Tara Westover</span>
+        <p>This book is a non-fiction recount of Tara's life growing up, battling the frustrations of a family that
+            doesn't believe in traditional school or government intervention, instead relying on the Bible as they
+            prepare for the expected end of the world. Tara recounts all the ways her family challenged her education
+            and how eventually she had to choose between family ties and pursuing her interests to make a name of
+            herself and how difficult that choice was even when she could see her family's beliefs through clear eyes
+            after so much time away.</p>
+    </div>
+
     <div class="right">
         Class on the right
     </div>

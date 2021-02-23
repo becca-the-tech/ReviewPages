@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 5px;
+    height: 10%;
+    width: 100%;
+    background: coral;
+}
+
+h2 {
+    text-decoration: underline navy;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+span {
+    margin-top: 5px;
+    color: midnightblue;
+}
+
+body>div {
+    height: 400px;
+    width: 15%;
+    float: left;
+    background-color: skyblue;
+    border: 1px solid navy;
+}
+
+.middle {
+    height: 400px;
+    width: 60%;
+    background: lightgreen;
+    padding: 0 10px;
+}
+
+.right {
+    height: 400px;
+    width: 25%;
+    float: right;
+    background-color: plum;
+    border: 1px solid rebeccapurple;
+}
+
+footer {
+    border: 1px solid navy;
+    height: 5%;
+    width: 100%;
+    background: gray;
+    clear: both;
+}

@@ -1,0 +1,46 @@
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  ul {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: 100px;
+    height: 100px;
+    border: 1px solid navy;
+    justify-items: space-between;
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  strong {
+    display: block;
+    color: purple;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid navy;
+    padding: 10px;
+  }
+
+  .completed {
+    background: skyblue;
+  }
+
+  .in_progress {
+    background: rgb(255,100,150);
+  }

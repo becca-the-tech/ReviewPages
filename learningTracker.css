@@ -21,7 +21,7 @@ img {
 
   strong {
     display: block;
-    color: purple;
+    font-weight: normal;
   }
 
   .container {

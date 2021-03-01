@@ -1,0 +1,22 @@
+table {
+    margin: 0 auto;
+}
+
+td, th {
+    border: 1px solid navy;
+    margin: 0px;
+    padding: 5px;
+  }
+
+  th {
+    background: lightskyblue;
+  }
+
+  .striped {
+    background: rgb(200, 230, 255);
+  }
+
+  h1 {
+    color: navy;
+    text-align: center;
+  }

@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+}
+
+h1, h2, .intro p {
+    color: #66BFBF;
+}
+
+p {
+    font-weight: normal;
+}
+
+h2 {
+    border-bottom: 3px dotted navy;
+    width: 10%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin: 20px;
+}
+
+h3, a {
+    color: #11999E;
+}
+
+.skill {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.code {
+    float: right;
+    margin-left: 30px;
+}
+
+body {
+    position: relative;
+    text-align: center;
+    line-height: 2;
+}
+
+.pro {
+    text-decoration: underline;
+}
+
+
+#top-cloud {
+    position: relative;
+    left: 250px;
+}
+
+#bottom-cloud {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+
+.intro {
+    padding-top: 20px;
+    background: gray;
+}
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+    line-height: 2;
+}

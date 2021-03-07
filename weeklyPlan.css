@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .box {
+    height: 100px;
+    background: #8878f6;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+  }
+
+  .week {
+    background: black;
+    margin-bottom: 20px;
+  }
+
+  .toDo {
+    width: 25%;
+    background: #edeef7;
+    margin: 5px;
+    padding: 20px;
+  }
+
+  .dayName {
+    width: 15%;
+    margin: 0 auto;
+  }
+
+  .toDo.striped {
+    background: #b8b5ff;
+  }
+
+  .box.striped {
+    background: #e4fbff;
+  }
+
+  .finished {
+    opacity: 0.3;
+  }
+
+  .currentDay {
+    border: 20px solid whitesmoke;
+  }
+
+  .future {
+    opacity: 0.7;
+  }
+
+  /*rgb(240, 222, 222)
+
+  Color scheme courtesy of:
+  https://colorhunt.co/palette/265183
+
+  Dark purple- 7868e6
+  medium purple- b8b5ff
+  Light blue- e4fbff
+  Light purple- edeef7
+  */

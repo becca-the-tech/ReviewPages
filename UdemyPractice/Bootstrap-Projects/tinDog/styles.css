@@ -14,7 +14,7 @@ h1 {
 }
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 /* Navigation Bar */
@@ -45,11 +45,14 @@ h1 {
 .title-img {
     width: 60%;
     transform: rotate(25deg);
+    position: absolute;
 }
 
 /* Features Styling */
 #features {
     padding: 7% 15%;
+    background: white;
+    position: relative;
 }
 
 #features h3 {
@@ -120,4 +123,42 @@ h1 {
 
 .pricing-column {
     padding: 3% 2%;
+}
+
+/* CTA Section */
+#cta {
+    background: #ffaca8;
+    text-align: center;
+    padding: 5% 15%;
+}
+
+#cta h3 {
+    color: #fff;
+    font-size: 1.75rem;
+}
+
+footer {
+    text-align: center;
+    padding: 3% 10%;
+}
+
+footer i {
+    padding: 0 1%;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: gray;
+}
+
+/*Media Queries */
+@media (max-width: 1028px){
+    #title{
+        text-align: center;
+    }
+
+    .title-img {
+        position: static;
+        transform: rotate(0);
+    }
 }

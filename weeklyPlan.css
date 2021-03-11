@@ -45,6 +45,7 @@
 
   .finished {
     opacity: 0.3;
+    color: gray;
   }
 
   .currentDay {

@@ -9,10 +9,11 @@
 </head>
 
 <body>
-    <h1>Becca's Questionaire</h1>
-    <form method="POST" action="" enctype="text/plain">
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name">
+    <h1 id="title">Becca's Questionaire</h1>
+    <p id="description">Simple post-study questionaire.</p>
+    <form method="POST" action="" enctype="text/plain" id="survey-form">
+        <label for="name" id="name-label">Name: </label>
+        <input type="text" name="name" id="name" placeholder="First-Name Last-Name" required>
         <br>
         <h3>What subject did you study:</h3>
         <input type="checkbox" name="Python" id="Python" value="Python">
@@ -21,29 +22,37 @@
         <label for="JS">JavaScript</label>
         <input type="checkbox" name="other" id="other" value="other">
         <label for="other">Other</label>
-
         <br>
-        <label for="studyTime">How long did you study? (in minutes)</label>
-        <input type="number" min="0" max="120" step="5" id="studyTime" name="studyTime">
-        <br>
-        <label for="recall">Recall what you learned about: </label><br>
-        <textarea id="recall" name="recall" rows="8"
-            cols="30">Brainstorm to review what you learned. This will help cement the lessons in your mind.</textarea>
+        <label for="number" id="number-label">How long did you study? (in minutes)</label>
+        <input type="number" min="0" max="120" step="5" id="number" name="number" placeholder="0">
         <br>
         <h3>Did you create Anki flashcards to review?</h3>
         <label><input type="radio" id="anki" name="anki" value="yes"> Yes</label>
         <label><input type="radio" id="anki" name="anki" value="no">No</label>
         <br>
-        <label for="reminder">Would you like to be added to an email list reminding you to study this again in 3 days
-            time?</label>
-        <input type="checkbox" id="reminder">
+        <label for="reminder">Would you like to be added to an email list reminding you to study this again?</label>
+        <input type="checkbox" id="reminder" value="yesRemind">
         <br>
+        <label for="interval">Preferred Interval For Study Reminders:
+            <select name="interval" id="dropdown">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </label>
+        <br>
+
         <label for="studyDay">Choose the day you would like to be reminded: </label>
         <input type="date" name="studyDay" id="studyDay">
         <br>
-        <label>What email would you like the reminder to be sent to: <input type="email" id="email" name="email">
-            <br>
-            <input type="submit">
+        <label id="email-label">What email would you like the reminder to be sent to: <input type="email" id="email"
+                name="email" placeholder="email@email.com"></label>
+        <br>
+        <label for="recall">Recall what you learned about: </label><br>
+        <textarea id="recall" name="recall" rows="8"
+            cols="30">Brainstorm to review what you learned. This will help cement the lessons in your mind.</textarea>
+        <br>
+        <input type="submit" id="submit">
     </form>
     <script src="script.js"></script>
 </body>

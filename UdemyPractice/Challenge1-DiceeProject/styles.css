@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    text-align: center;
+    background: #5f5f5f;
+    margin: 0 10%;
+}
+
+h1 {
+    font-size: 6rem;
+    padding: 15px 0px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    display: inline-block;
+    background: #3f3f3f;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    color: lightgreen;
+}
+
+.container {
+    background: #5f5f5f;
+}
+
+.player1 {
+    color: pink;
+}
+
+.player2 {
+    color: lightskyblue;
+}
+
+.dice {
+    display: inline-block;
+    padding-right: 25px;
+}
+
+.player1Background {
+    background: pink;
+}
+
+.player2Background {
+    background: lightskyblue;
+}
+
+img {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+footer {
+    position: absolute;
+    bottom: 5%;
+}

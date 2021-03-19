@@ -10,7 +10,7 @@
 
 <body>
     <h1>📚 Becca's Reading List 📚</h1>
-    <table>
+    <table id="bookList">
         <thead>
             <tr>
                 <th>Title</th>
@@ -56,7 +56,26 @@
             </tr>
         </tbody>
     </table>
-    <script src="script.js"></script>
+    <br>
+    <form>
+        <label for="bookName">Book Title: </label>
+        <input type="text" class="input" name="bookName" id="bookName">
+        <br>
+        <label for="author">Author Name: </label>
+        <input type="text" class="input" name="author" id="author">
+        <br>
+        <label>Pages:
+            <input type="number" id="pages" min="0" max="2000">
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <h2 id="info"></h2>
+
+
+
+
+    <script src="bookList.js"></script>
 </body>
 
 </html>

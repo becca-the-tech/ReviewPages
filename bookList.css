@@ -20,3 +20,8 @@ td, th {
     color: navy;
     text-align: center;
   }
+
+  form {
+    text-align: center;
+    margin-top: 5%;
+  }

@@ -1,0 +1,81 @@
+html{
+    margin: 30px;
+    height: 200px;
+    background-color: darkblue;
+    background-image: linear-gradient(aliceblue, azure);
+  }
+
+h2 {
+    font-size: x-large;
+    color: navy;
+    border-bottom: 2px dotted black;
+    background-color: lightslategray;
+}
+
+h4 {
+    font-size: larger;
+    color:rebeccapurple;
+    background-color: lightsteelblue;
+}
+
+/*th, td {
+    border-color: black;
+    text-align: center;
+} */
+
+.extraInfo {
+    font-size: 13px;
+}
+
+h3 {
+    font-size: x-large;
+    color: lightcoral;
+    background-color: lightgray;
+}
+
+.hobby, li {
+    color: cornflowerblue;
+}
+
+strong {
+    color: slateblue;
+}
+
+h1 {
+    color: slateblue;
+    background-color: lavender;
+}
+
+span.date {
+    color: slateblue;
+    font-weight: bold;
+}
+
+.author {
+    color: navy;
+}
+
+footer {
+    margin: 30px;
+    padding-left: 15px;
+    border: 1px solid darkblue;
+    background-color: lightcyan;
+}
+
+#signed {
+    text-align: center;
+    font-size: small;
+    font-family: Helvetica;
+    color: rebeccapurple;
+}
+
+img {
+    border: 2px solid black;
+    float: right;
+    width: 200px;
+    height: 200px;
+}
+
+h1, h2, h3, h4 {
+    padding-left: 15px;
+}

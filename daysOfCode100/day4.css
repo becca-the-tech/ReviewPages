@@ -1,0 +1,62 @@
+h1 {
+    background-color: black;
+    color: skyblue;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+nav {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    background-color: hsla(240, 86%, 30%, 1);
+}
+
+a {
+    padding-left: 50px;
+    color:lightblue;
+}
+
+h3 {
+    background-color: navy;
+    color: silver;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h4{
+    border: 2px dotted navy;
+    color: hsla(240, 86%, 30%, 0.65);
+    background-color: skyblue;
+    padding: 10px;
+    margin: 0px;
+}
+
+
+strong {
+    font-size: 1.03em;
+    color: navy;
+}
+
+article h4 {
+    border: 2px dotted navy;
+    border-bottom: none;
+    color: navy;
+    background-color: skyblue;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+article div {
+    padding: 30px;
+    margin-top: 0px;
+    border: 2px dotted navy;
+    border-top: none;
+}
+
+footer {
+    border: 1px solid lightblue;
+    padding-left: 25px;
+}

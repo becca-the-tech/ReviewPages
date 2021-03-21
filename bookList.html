@@ -19,7 +19,7 @@
                 <th>Audiobook Length</th>
                 <th>Library Due Date/ Own Book?</th>
                 <th>Completed</th>
-                <th>Click to Remove</th>
+                <th class="removable">Click to Remove</th>
             </tr>
         </thead>
         <tbody id="tableBody">
@@ -62,9 +62,9 @@
         </tbody>
     </table>
     <br>
-    <form>
+    <form id="newBookForm">
         <label for="bookName">Book Title: </label>
-        <input type="text" class="input" name="bookName" id="bookName">
+        <input type="text" class="input" name="bookName" id="bookName" required>
         <br>
         <label for="author">Author Name: </label>
         <input type="text" class="input" name="author" id="author">

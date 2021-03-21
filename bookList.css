@@ -25,3 +25,15 @@ td, th {
     text-align: center;
     margin-top: 5%;
   }
+
+  .removable {
+    background-color: #cfcfcf;
+  }
+
+  .striped .removable {
+    background-color: #afafaf;
+  }
+
+  th.removable {
+    background-color: #8c8c8c;
+  }

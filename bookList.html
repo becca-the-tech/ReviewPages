@@ -70,7 +70,19 @@
         <input type="text" class="input" name="author" id="author">
         <br>
         <label>Pages:
-            <input type="number" id="pages" min="0" max="2000">
+            <input type="number" id="pages" min="0" max="2000" placeholder="###">
+        </label>
+        <br>
+        <label>Audiobook Length:
+            <input type="text" id="audiobookLength" name="audiobookLength" placeholder="# hrs, # min">
+        </label>
+        <br>
+        <label>Date due if library, or if you own either book/audio:
+            <input type="text" id="ownOrDueDate" name="ownOrDueDate" placeholder="ebook due 9/30, own audio">
+        </label>
+        <br>
+        <label>Progress:
+            <input type="text" id="progress" name="progress" placeholder="in progress/rereading/finished">
         </label>
         <br>
         <button type="submit">Submit</button>

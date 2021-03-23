@@ -24,6 +24,9 @@ btn.addEventListener("click", function(event) {
     let bookTitle = document.getElementById("bookName").value;
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
+    let audiobookLength = document.getElementById("audiobookLength").value;
+    let ownOrDueDate = document.getElementById("ownOrDueDate").value;
+    let progress = document.getElementById("progress").value;
 
     //creates new row and access the tableBody since that's where the new row will be appended
     let newRow = document.createElement("tr");
@@ -37,7 +40,7 @@ btn.addEventListener("click", function(event) {
     }
 
     //TODO: still need to add form inputs and JS DOM references to Time, Status, and Completion
-    newRow.innerHTML = "<td>" + bookTitle + "</td><td>" + author + "</td><td>" + pages + " pages</td><td>Time</td><td>Own/Library</td><td>In Progress/Rereading/Finished</td><td class='removable'>Remove?</td>";
+    newRow.innerHTML = "<td>" + bookTitle + "</td><td>" + author + "</td><td>" + pages + " pages</td><td>" + audiobookLength + "</td><td>" + ownOrDueDate + "</td><td>" + progress + "</td><td class='removable'>Remove?</td>";
 
     //adding event listener to the new td at end to book table row to remove books
     newRow.lastChild.addEventListener("click", function() {

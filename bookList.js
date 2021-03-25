@@ -40,7 +40,7 @@ btn.addEventListener("click", function(event) {
     }
 
     //TODO: still need to add form inputs and JS DOM references to Time, Status, and Completion
-    newRow.innerHTML = "<td>" + bookTitle + "</td><td>" + author + "</td><td>" + pages + " pages</td><td>" + audiobookLength + "</td><td>" + ownOrDueDate + "</td><td>" + progress + "</td><td class='removable'>Remove?</td>";
+    newRow.innerHTML = "<td class='title'>" + bookTitle + "</td><td class='author'>" + author + "</td><td class='pages'>" + pages + " pages</td><td class='audioLength'>" + audiobookLength + "</td><td class='dueOrOwn'>" + ownOrDueDate + "</td><td class='progress'>" + progress + "</td><td class='removable'>Remove?</td>";
 
     //adding event listener to the new td at end to book table row to remove books
     newRow.lastChild.addEventListener("click", function() {

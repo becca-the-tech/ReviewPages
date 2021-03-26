@@ -5,7 +5,6 @@ let bookList = document.getElementsByTagName("bookList");
 let h2 = document.getElementById("info");
 let form = document.getElementById("newBookForm");
 
-
 /*Note to self: form inputs that use the value need to be declared within the Listener because
 otherwise they are being initialized before they even have value */
 
@@ -13,10 +12,14 @@ otherwise they are being initialized before they even have value */
 //ADD BOOKS TO TABLE
 
 //submit button for form to add book
-let btn = document.getElementsByTagName("button")[0];
+let formBtn = document.querySelector(".form-btn");
+
+//unHide button, only visible once columns are hidden
+let unHideBtn = document.querySelector(".unHide");
+
 
 //event listener on form to add book to table
-btn.addEventListener("click", function(event) {
+formBtn.addEventListener("click", function(event) {
     //telling browser not to submit form so values can be used
     event.preventDefault();
 
@@ -75,6 +78,7 @@ function striped(arrayList) {
     }
 }
 
+//for removable column, confirms user wants removal and then carries out the removal of rows
 function confirmAndRemove(target) {
     //topParent gets the target (td)'s parentNode which is tr, and grandparent of table body
     //then gets children for table body to get all the tr's
@@ -97,3 +101,35 @@ for (let i = 1; i < removables.length; i++) {
         confirmAndRemove(removables[i]);
     });
 }
+
+//adds ability to hide columns from view
+function hide(column) {
+    let table = document.getElementsByTagName('table')[0];
+
+    //turns column name into the className
+    let className = "." + column;
+
+    //gets all th/td elements with the specified className
+    let tableData = document.querySelectorAll(className);
+
+    if (window.confirm("Are you sure you would like to hide the " + column + " column?")) {
+        for (let i = 0; i < tableData.length; i++) {
+            tableData[i].style.display = "none";
+        }
+    }
+
+    //once Hide() runs and turns columns invisible, makes unHide button visible
+    unHideBtn.style.display = 'block';
+}
+
+//gets all table header elements
+let tableHead = document.querySelectorAll("th");
+//adds click listeners to all but the first row (title is required) and the last row (removable must stay)
+for (let i = 1; i < tableHead.length - 1; i++) {
+    tableHead[i].addEventListener("click", function() {
+        let columnName = tableHead[i].classList;
+        hide(columnName);
+    });
+}
+
+//TODO add a UnHide() function that changes all visibility back to normal view

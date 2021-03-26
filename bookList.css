@@ -37,3 +37,8 @@ td, th {
   th.removable {
     background-color: #8c8c8c;
   }
+
+  .unHide {
+    display: none;
+    margin: 0 auto;
+  }

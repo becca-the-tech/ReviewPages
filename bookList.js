@@ -114,7 +114,7 @@ function hide(column) {
 
     if (window.confirm("Are you sure you would like to hide the " + column + " column?")) {
         for (let i = 0; i < tableData.length; i++) {
-            tableData[i].style.display = "none";
+            tableData[i].classList.add("hidden");
         }
     }
 
@@ -133,3 +133,28 @@ for (let i = 1; i < tableHead.length - 1; i++) {
 }
 
 //TODO add a UnHide() function that changes all visibility back to normal view
+function unHide() {
+    //tableHead[i] is cycling through the columns aside from Title and Removable
+    for (let i = 1; i < tableHead.length - 1; i++) {
+        if (tableHead[i].classList.contains("hidden")) {
+            tableHead[i].classList.remove("hidden");
+        }
+    }
+
+    //unHide for table data
+    let tableBodyRows = document.querySelector("tbody").children;
+    for (let i = 0; i < tableBodyRows.length; i++) {
+        for (let j = 0; j < tableBodyRows[i].children.length; j++) {
+            let currentColumn = tableBodyRows[i].children[j];
+            if (currentColumn.classList.contains("hidden")) {
+                currentColumn.classList.remove("hidden");
+            }
+        }
+    }
+    //once everything is visible on screen, hides the unhide button again
+    unHideBtn.style.display = "none";
+}
+
+unHideBtn.addEventListener("click", function() {
+    unHide();
+});

@@ -3,7 +3,10 @@ let bookList = document.getElementsByTagName("bookList");
 
 //h2 to display info from the form, form access to reset inputs at the end of click handler
 let h2 = document.getElementById("info");
-let form = document.getElementById("newBookForm");
+let form = document.querySelector("#newBookForm");
+
+//in global scope so that each time hide() runs, it keeps track of what columns have been hidden
+let hiddenList = [];
 
 /*Note to self: form inputs that use the value need to be declared within the Listener because
 otherwise they are being initialized before they even have value */
@@ -24,26 +27,26 @@ formBtn.addEventListener("click", function(event) {
     event.preventDefault();
 
     //form selectors
-    let bookTitle = document.getElementById("bookName").value;
+    let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
-    let audiobookLength = document.getElementById("audiobookLength").value;
-    let ownOrDueDate = document.getElementById("ownOrDueDate").value;
+    let audioLength = document.getElementById("audioLength").value;
+    let dueOrOwn = document.getElementById("dueOrOwn").value;
     let progress = document.getElementById("progress").value;
 
     //creates new row and access the tableBody since that's where the new row will be appended
     let newRow = document.createElement("tr");
     let tableBody = document.getElementById("tableBody");
 
-    //checks if bookTitle or pages are empty since they are required
-    //alerts user if either is missing without resetting the form
-    if (bookTitle == '' || pages == '') {
-        alert("Book title and pages are required. Please fill them in.");
+    //checks if bookTitle is empty since it is required
+    //alerts user if it is missing without resetting the form
+    if (title == '') {
+        alert("Book title is required. Please fill them in.");
         return;
     }
 
     //TODO: still need to add form inputs and JS DOM references to Time, Status, and Completion
-    newRow.innerHTML = "<td class='title'>" + bookTitle + "</td><td class='author'>" + author + "</td><td class='pages'>" + pages + " pages</td><td class='audioLength'>" + audiobookLength + "</td><td class='dueOrOwn'>" + ownOrDueDate + "</td><td class='progress'>" + progress + "</td><td class='removable'>Remove?</td>";
+    newRow.innerHTML = "<td class='title'>" + title + "</td><td class='author'>" + author + "</td><td class='pages'>" + pages + " pages</td><td class='audioLength'>" + audioLength + "</td><td class='dueOrOwn'>" + dueOrOwn + "</td><td class='progress'>" + progress + "</td><td class='removable'>Remove?</td>";
 
     //adding event listener to the new td at end to book table row to remove books
     newRow.lastChild.addEventListener("click", function() {
@@ -106,20 +109,34 @@ for (let i = 1; i < removables.length; i++) {
 function hide(column) {
     let table = document.getElementsByTagName('table')[0];
 
-    //turns column name into the className
+    //turns column name into the className and idName to be used later
+    /*Note for self: column mutates later when new class of 'hidden' is added which is why idName has to be declared up here */
     let className = "." + column;
+    let idName = "#" + column;
+
+    //adds idName to global list of columns that have been hidden
+    hiddenList.push(idName);
 
     //gets all th/td elements with the specified className
     let tableData = document.querySelectorAll(className);
 
+    //adds the hidden class to each td element of specified className, sets form to disabled
+    //adds placeholder text to let user know currently hidden
+    //unHideButton becomes visible since items are now hidden, only if user confirms they want to hide column
     if (window.confirm("Are you sure you would like to hide the " + column + " column?")) {
         for (let i = 0; i < tableData.length; i++) {
             tableData[i].classList.add("hidden");
         }
+
+        //disabling the form input for the hidden columns
+        let formInputToHide = document.querySelector(idName);
+        formInputToHide.setAttribute("disabled", "");
+        formInputToHide.setAttribute("placeholder", "currently hidden");
+
+        //once Hide() runs and turns columns invisible, makes unHide button visible
+        unHideBtn.style.display = 'block';
     }
 
-    //once Hide() runs and turns columns invisible, makes unHide button visible
-    unHideBtn.style.display = 'block';
 }
 
 //gets all table header elements
@@ -151,6 +168,17 @@ function unHide() {
             }
         }
     }
+
+    //iterates through each id in hiddenList to remove disabled attribute and reset placeholder to 'enter value here'
+    for (let i = 0; i < hiddenList.length; i++) {
+        let unHideElement = document.querySelector(hiddenList[i]);
+        unHideElement.removeAttribute("disabled");
+        unHideElement.setAttribute("placeholder", "enter value here");
+    }
+
+    //resets hiddenList
+    hiddenList = [];
+
     //once everything is visible on screen, hides the unhide button again
     unHideBtn.style.display = "none";
 }

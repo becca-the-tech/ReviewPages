@@ -65,8 +65,8 @@
     <button class="unHide" id="unHide">Un-Hide All Columns</button>
     <br>
     <form id="newBookForm">
-        <label for="bookName">Book Title: </label>
-        <input type="text" class="input" name="bookName" id="bookName" required>
+        <label for="title">Book Title: </label>
+        <input type="text" class="input" name="title" id="title" required>
         <br>
         <label for="author">Author Name: </label>
         <input type="text" class="input" name="author" id="author">
@@ -76,15 +76,15 @@
         </label>
         <br>
         <label>Audiobook Length:
-            <input type="text" id="audiobookLength" name="audiobookLength" placeholder="# hrs, # min">
+            <input type="text" id="audioLength" name="audioLength" placeholder="# hrs, # min">
         </label>
         <br>
         <label>Date due if library, or if you own either book/audio:
-            <input type="text" id="ownOrDueDate" name="ownOrDueDate" placeholder="ebook due 9/30, own audio">
+            <input type="text" id="dueOrOwn" name="dueOrOwn" placeholder="ebook due 9/30, own audio">
         </label>
         <br>
         <label>Progress:
-            <input type="text" id="progress" name="progress" placeholder="in progress/rereading/finished">
+            <input type="text" id="progress" name="progress" placeholder="# %">
         </label>
         <br>
         <button class="form-btn" type="submit">Submit</button>

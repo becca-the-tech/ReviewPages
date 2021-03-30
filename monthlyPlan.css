@@ -24,3 +24,7 @@ span.dates {
     color: pink;
 
 }
+
+.strike {
+    text-decoration: line-through;
+}

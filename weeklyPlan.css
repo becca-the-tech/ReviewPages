@@ -1,6 +1,19 @@
 @media (max-width: 960px){
+    *{
+      box-sizing: border-box;
+    }
+
+    .day {
+      height: 400px;
+      margin-bottom: 30px;
+    }
+
     .currentDay {
         border: none;
+    }
+
+    .toDo {
+      height: 200px;
     }
 }
 

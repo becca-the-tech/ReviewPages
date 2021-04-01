@@ -229,28 +229,40 @@
         <label>Type of goal: </label><input type="text" id="goalLabel" name="goal"><br>
         <label>Number of days left for goal: <input type="number" id="daysLabel" name="days"></label><br>
         <label>Number for goal item: <input type="number" name="goalNumber" id="goalNumber"></label><br>
-
+        <label>Type of unit for the goal item: <input type="text" name="unit" id="unit"></label><br>
         <input type="submit" id="submit">
     </form>
     <div id="goalBox">
         <h2 id="typeGoal">Type of Goal</h2>
+        <p id="calculate"></p>
     </div>
 
-    <!-- <script>
+    <script>
         let submit = document.getElementById("submit");
-        let goalName = document.getElementById("goalLabel");
-        let days = document.getElementById("daysLabel");
-        let goalNumber = document.getElementById("goalNumber");
 
-        let goalBox= document.getElementById("goalBox");
-        let typeGoal = document.getElementById("typeGoal");
 
-        submit.addEventListener("click", function(){
-            typeGoal.innerHTML = goalName.innerHTML;
+        submit.addEventListener("click", function(event) {
+            event.preventDefault();
+            let goalName = document.getElementById("goalLabel");
+            let days = document.getElementById("daysLabel");
+            let goalNumber = document.getElementById("goalNumber");
+            let unit = document.getElementById("unit");
 
+            let goalBox = document.getElementById("goalBox");
+            let typeGoal = document.getElementById("typeGoal");
+
+
+            typeGoal.innerHTML = goalName.value;
+            let calculate = document.querySelector("#calculate");
+
+            let average = Math.round(goalNumber.value / days.value * 100) / 100;
+            calculate.innerHTML = "The amount to do " + goalNumber.value;
+            calculate.innerHTML += " " + unit.value;
+            calculate.innerHTML += " within " + days.value + " days is: <strong>";
+            calculate.innerHTML += average + "</strong>";
         }
         )
-    </script> -->
+    </script>
 </body>
 
 </html>

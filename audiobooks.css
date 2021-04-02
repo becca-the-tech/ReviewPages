@@ -32,6 +32,10 @@ span {
     background: lightseagreen;
 }
 
+.completed {
+    background: lightskyblue;
+}
+
 @media (max-width: 960px){
     .jumbotron {
         background: gray;

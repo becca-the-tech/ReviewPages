@@ -1,10 +1,38 @@
 /*Colors inspired by: https://colorhunt.co/palette/258092 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 
 img {
     height: 150px;
     width: 150px;
     border-radius: 50%;
   }
+
+figure {
+  float: left;
+  margin: 10px 0 10px 10px;
+}
+
+.img-text {
+  float: right;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+hr {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+nav, h2 {
+  background: #eae3c8;
+  margin: 0;
+  padding: 7px;
+}
 
   ul {
     width: 90%;
@@ -30,6 +58,7 @@ img {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
   }
 
   .box {
@@ -55,6 +84,7 @@ img {
   h2, h3 {
     /*Dark Brown */
     color: #927022;
+    padding: 10px 0;
   }
 
   h2 {

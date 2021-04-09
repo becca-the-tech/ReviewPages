@@ -40,12 +40,32 @@ img {
     background: #cfc5a5;
   }
 
+  div {
+    text-align: center;
+  }
+
+  nav a {
+    color: #3f8fd2;
+  }
+
+  nav a:hover {
+    color: #a1cae2;
+  }
+
+  h2, h3 {
+    /*Dark Brown */
+    color: #927022;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
   h3 {
 /*    color: #4a47a3; Steel purple color */
 
-    /*Dark brown h3 */
-    color: #927022;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .completed {

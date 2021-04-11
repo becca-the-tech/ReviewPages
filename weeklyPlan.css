@@ -1,4 +1,4 @@
-@media (max-width: 960px){
+/* @media (max-width: 960px){
     *{
       box-sizing: border-box;
     }
@@ -15,20 +15,21 @@
     .toDo {
       height: 200px;
     }
-}
+} */
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
   }
 
   .box {
-    height: 100px;
+    height: 150px;
     background: #8878f6;
     margin: 5px;
     padding: 5px;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .week {
@@ -37,15 +38,16 @@
   }
 
   .toDo {
-    width: 25%;
+    width: 20%;
     background: #edeef7;
     margin: 5px;
     padding: 20px;
+    justify-content: stretch;
   }
 
   .dayName {
-    width: 15%;
-    margin: 0 auto;
+    width: 5%;
+    margin: 0 3%;
   }
 
   .toDo.striped {

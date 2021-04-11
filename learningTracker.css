@@ -17,10 +17,10 @@ figure {
 }
 
 .img-text {
-  float: right;
+  float: left;
   text-align: left;
   margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 3%;
 }
 
 hr {

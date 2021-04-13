@@ -115,6 +115,10 @@ section {
     color: #3f8fd2;
   }
 
+  .hidden {
+    display: none;
+  }
+
   h2, h3 {
     /*Dark Brown */
     color: #927022;

@@ -64,31 +64,34 @@
     </table>
     <button class="unHide" id="unHide">Un-Hide All Columns</button>
     <br>
-    <form id="newBookForm">
-        <label for="title">Book Title: </label>
-        <input type="text" class="input" name="title" id="title" required>
-        <br>
-        <label for="author">Author Name: </label>
-        <input type="text" class="input" name="author" id="author">
-        <br>
-        <label>Pages:
-            <input type="number" id="pages" min="0" max="2000" placeholder="###">
-        </label>
-        <br>
-        <label>Audiobook Length:
-            <input type="text" id="audioLength" name="audioLength" placeholder="# hrs, # min">
-        </label>
-        <br>
-        <label>Date due if library, or if you own either book/audio:
-            <input type="text" id="dueOrOwn" name="dueOrOwn" placeholder="ebook due 9/30, own audio">
-        </label>
-        <br>
-        <label>Progress:
-            <input type="text" id="progress" name="progress" placeholder="# %">
-        </label>
-        <br>
-        <button class="form-btn" type="submit">Submit</button>
-    </form>
+    <div class="bookForm">
+        <h3>Add More Books!</h3>
+        <form id="newBookForm">
+            <label for="title">Book Title: </label>
+            <input type="text" class="input" name="title" id="title" required>
+            <br>
+            <label for="author">Author Name: </label>
+            <input type="text" class="input" name="author" id="author">
+            <br>
+            <label>Pages:
+                <input type="number" id="pages" min="0" max="2000" placeholder="###">
+            </label>
+            <br>
+            <label>Audiobook Length:
+                <input type="text" id="audioLength" name="audioLength" placeholder="# hrs, # min">
+            </label>
+            <br>
+            <label>Date due if library, or if you own either book/audio:
+                <input type="text" id="dueOrOwn" name="dueOrOwn" placeholder="ebook due 9/30, own audio">
+            </label>
+            <br>
+            <label>Progress:
+                <input type="text" id="progress" name="progress" placeholder="# %">
+            </label>
+            <br>
+            <button class="form-btn" type="submit" id="submit">Submit</button>
+        </form>
+    </div>
     <h2 id="info"></h2>
 
 

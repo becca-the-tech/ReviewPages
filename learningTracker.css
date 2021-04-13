@@ -4,10 +4,11 @@
   padding: 0;
 }
 
-body, nav {
-  background: linear-gradient(90deg, #3f8fd2, navy);
+/*body, nav {
+  background: linear-gradient(95deg, #1f6fd2, navy);
 /*  background: linear-gradient(90deg, navy, #3f8fd2); */
-  color: navy;
+body {
+  background: navy;
 }
 
 img {
@@ -16,24 +17,34 @@ img {
     border-radius: 50%;
   }
 
-figure {
+/*figure {
   float: left;
   margin: 10px 0 10px 10px;
 }
+*/
 
 .img-text {
-  float: left;
-  text-align: left;
-  width: 50%;
+  float: right;
+  text-align: right;
+  width: 45%;
   margin-left: 10px;
-  margin-top: 3%;
+  margin-top: 0;
   margin-bottom: 1.5%;
-/*  color: #eae3c8;*/
+  /* margin: 50px auto; */
+/*  color: #eae3c8; */
   color: #a1cae2;
+  background: black;
+  opacity: 0.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  border-top-right-radius: 0px;
+  font-size: 1.1rem;
 }
 
 .img-text h1{
-  color: #a1cae2;
+  color: #3f8fd2;
+/*  color: #a1cae2; */
 }
 
 hr {
@@ -53,7 +64,7 @@ nav {
 /*  background: #3f8fd2; */
 /*  background: #eae3c8; */
   margin: 0;
-  padding: 7px;
+  padding: 10px 2px 0 4px;
 }
 
 /* ul {
@@ -103,17 +114,43 @@ section {
   }
 
   nav a {
+/*    color:#a1cae2;
+    color: #3f8fd2; */
     color: #cfc5a5;
+/*    color: #c2b092; */
     text-decoration: none;
+    background: black;
+    /* opacity: .6; */
+    padding: 2px;
   }
 
   nav div {
     color: #3f8fd2;
+    /*background: black;
+    opacity: .6;*/
+  }
+
+  nav {
+  margin-top: 0px;
+  margin-left: 50%;
+  padding-top: 20px;
+  padding-bottom: 7px;
+  background: black;
+  opacity: .55;
   }
 
   nav a:hover {
+/*    color: #a1cae2; */
     color: #3f8fd2;
   }
+
+header {
+  background-image: url("https://images.freeimages.com/images/large-previews/89e/screens-row-1243513.jpg");
+  background-position: center;
+  height: 350px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
 
   .hidden {
     display: none;
@@ -167,4 +204,12 @@ background: rgb(255,100,150); */
 a {
   color: navy;
   text-decoration-style: dotted;
+}
+
+footer {
+  background: #3030b0;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }

@@ -12,30 +12,33 @@
 </head>
 
 <body>
-    <nav>
-        <div>
-            <a href="#UdemyWebDev">Udemy Web Dev</a> | <a href="#fcc">FreeCodeCamp</a> | <a
-                href="#codecademy">Codecademy</a> | <a href="#100devs">100 Devs</a> | <a href="./weeklyPlan.html"
-                target="_blank">Weekly Plan</a>
-        </div>
-    </nav>
-    <figure>
+    <header id="top">
+        <nav>
+            <div>
+                <a href="#UdemyWebDev">Udemy Web Dev</a> | <a href="#fcc">FreeCodeCamp</a> | <a
+                    href="#codecademy">Codecademy</a> | <a href="#100devs">100 Devs</a> | <a href="./weeklyPlan.html"
+                    target="_blank">Weekly Plan</a>
+            </div>
+        </nav>
+
+        <!--     <figure>
         <img src="https://images.freeimages.com/images/large-previews/89e/screens-row-1243513.jpg" alt="computer">
         <figcaption><em>Source</em>: freeimages.com</figcaption>
-    </figure>
-    <header id="top">
+    </figure> -->
         <div class="img-text">
-            <h1>Becca's Learning</h1>
-            <p>I'm a programmer who loves numbers, books, and nature. I love to learn and want to use my skill with
-                computers to
-                help others. These are sources I'm currently learning from, I created this to track my progress.</p>
+            <h1>Becca's Learning Tracker</h1>
+            <p>I'm a programmer who loves numbers, books, and nature. These are sources I'm currently learning from; I
+                created this to track my progress.</p>
         </div>
     </header>
+
     <hr>
     <section>
         <!--   <h2>Learning</h2> -->
         <article id="UdemyWebDev" class="non-striped">
-            <h3><i class="fas fa-sort-down"></i> Web Development by Angela Yu <a href="#top">Top</a></h3>
+            <h3><i class="fas fa-arrow-circle-right"></i> Web Development
+                by
+                Angela Yu <a href="#top">Top</a></h3>
             <div class="container">
                 <div class="box completed"><s><strong>Intro to HTML</strong> 1 hr, 19 min</s></div>
                 <div class="box completed"><s><strong>Intermediate HTML</strong> 50 min</s></div>
@@ -75,7 +78,7 @@
         </article>
 
         <article id="fcc" class="fcc striped">
-            <h3><i class="fas fa-sort-down"></i> FreeCodeCamp <a href="#top">Top</a></h3>
+            <h3><i class="fas fa-arrow-circle-right"></i> FreeCodeCamp <a href="#top">Top</a></h3>
             <div class="container">
                 <div class="box completed">
                     Basic HTML & HTML 5: 28/28
@@ -105,7 +108,7 @@
         </article>
 
         <article id="codecademy" class="non-striped">
-            <h3><i class="fas fa-sort-down"></i> Codecademy <a href="#top">Top</a></h3>
+            <h3><i class="fas fa-arrow-circle-right"></i> Codecademy <a href="#top">Top</a></h3>
             <div class="container">
                 <div class="box completed">1- Welcome<br>1/1 </div>
                 <div class="box completed">2- Getting Started<br>3/3 </div>
@@ -152,7 +155,7 @@
             </div>
         </article>
         <article id="100devs" class="striped">
-            <h3><i class="fas fa-sort-down"></i> 100 Devs by Leon Noel <a href="#top">Top</a></h3>
+            <h3><i class="fas fa-arrow-circle-right"></i> 100 Devs by Leon Noel <a href="#top">Top</a></h3>
             <div class="container">
                 <div class="box completed">
                     <a href="https://www.youtube.com/watch?v=N2VlXVZJIcY" target="_blank">Leon Noel Day 2</a>
@@ -255,5 +258,9 @@
     </section>
     <script src="./learningTracker.js"></script>
 </body>
+<footer>
+    <p>Image courtesy of freeimages.com.</p>
+    <p>&copy; BV in 2021</p>
+</footer>
 
 </html>

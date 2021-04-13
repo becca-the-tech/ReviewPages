@@ -23,7 +23,7 @@ td, th {
 
   form {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2%;
   }
 
   .removable {
@@ -45,4 +45,35 @@ td, th {
 
   .hidden {
     display: none;
+  }
+
+  .bookForm {
+    background: skyblue;
+    text-align: left;
+    padding-bottom: 5px;
+    position: absolute;
+    bottom: 5%;
+  }
+
+  .bookForm form {
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .bookForm label, .bookForm input {
+    margin: 3px 0px;
+  }
+
+  .bookForm input {
+    width: 60%;
+  }
+
+  #submit {
+    margin-left: 10px;
+  }
+
+  .bookForm h3 {
+    color: navy;
+    text-align: center;
+    padding-top: 3px;
   }

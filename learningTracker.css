@@ -25,18 +25,20 @@ img {
 
 .img-text {
   float: right;
-  text-align: right;
+  text-align: center;
   width: 45%;
   margin-left: 10px;
   margin-top: 0;
   margin-bottom: 1.5%;
+/*  margin-right: 30px;*/
   /* margin: 50px auto; */
 /*  color: #eae3c8; */
   color: #a1cae2;
   background: black;
-  opacity: 0.6;
+  opacity: 0.8;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  padding-right: 30px;
   border-radius: 30px;
   border-top-right-radius: 0px;
   font-size: 1.1rem;
@@ -44,6 +46,8 @@ img {
 
 .img-text h1{
   color: #3f8fd2;
+  padding-top: 10px;
+  padding-bottom: 10px;
 /*  color: #a1cae2; */
 }
 
@@ -133,10 +137,11 @@ section {
   nav {
   margin-top: 0px;
   margin-left: 50%;
+  /* margin-right: 30px; */
   padding-top: 20px;
   padding-bottom: 7px;
   background: black;
-  opacity: .55;
+  opacity: .8;
   }
 
   nav a:hover {
@@ -174,6 +179,7 @@ header {
 
   .completed {
     background: #a1cae2;
+    text-decoration: line-through;
   }
 
   .in_progress {

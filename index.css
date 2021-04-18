@@ -20,6 +20,10 @@ section ul li a{
     font-weight: 600;
 }
 
+#hosted {
+    background-color: rgb(190, 190, 245);
+}
+
 #codecademyProjects {
     background-color: springgreen;
 }
@@ -46,8 +50,10 @@ nav a:hover {
     color: cyan;
 }
 
-nav ul {
+nav ul li {
     list-style-type: none;
+    display: inline;
+    padding-right: 5%;
 }
 
 nav {

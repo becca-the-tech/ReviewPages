@@ -8,7 +8,8 @@
   background: linear-gradient(95deg, #1f6fd2, navy);
 /*  background: linear-gradient(90deg, navy, #3f8fd2); */
 body {
-  background: navy;
+  background: linear-gradient(80deg, navy, #177bcc);
+/*  background: #0a6acc; */
 }
 
 img {
@@ -91,9 +92,9 @@ strong {
     font-weight: normal;
 }
 
-section {
-  background: navy;
-}
+/*section {
+
+}*/
 
 .container {
     width: 90%;
@@ -213,7 +214,8 @@ a {
 }
 
 footer {
-  background: #3030b0;
+/*  background: #3030b0; */
+  background: #4595c4;
   text-align: center;
   font-size: 0.9rem;
   padding-top: 3px;

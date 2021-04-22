@@ -35,6 +35,9 @@ img {
   /* margin: 50px auto; */
 /*  color: #eae3c8; */
   color: #a1cae2;
+/* Opacity changes both fonts and background to more transparent
+  To just change the background and leave the font non-transparent, use rgba
+  background: rgba(0,0,0,0.6); */
   background: black;
   opacity: 0.8;
   padding-top: 10px;

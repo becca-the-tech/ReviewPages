@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CSS Property Notes</h1>
+    <ul>
+        <li>Opacity controls the transparency of the whole element, including any child elements</li>
+        <li>rgba() is the alpha channel and if you set it for the background, it will just affect the transparency of
+            the background not the whole element</li>
+        <li>to add alpha channel to hex colors, add an extra two hex digits (so #a1a2a3 becomes #a1a2a300 for fully
+            transparent, and #a1a2a3FF for fully opaque (although the FF is usually left off since that's the default
+            setting)</li>
+        <li>inline elements do not respect width, height, margin, or padding settings whereas block and inline-block
+            elements will. They may sometimes appear with left-right padding/margins but they are inconsistent and so if
+            you want to set those it should be "display: inline-block"</li>
+        <li>If you have elements that aren't displaying their margin/width/height properly, check to see if they are
+            inline elements and if so set them as inline-block</li>
+        <li>body { margin: 0; } will get rid of that top and left margin that automatically comes with HTML pages</li>
+    </ul>
+</body>
+
+</html>

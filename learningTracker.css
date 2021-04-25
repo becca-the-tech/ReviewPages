@@ -48,8 +48,11 @@ img {
   font-size: 1.1rem;
 }
 
+
+
 .img-text h1{
   color: #3f8fd2;
+  color: #e1e1e1;
   padding-top: 10px;
   padding-bottom: 10px;
 /*  color: #a1cae2; */
@@ -156,6 +159,7 @@ strong {
 header {
   background-image: url("https://images.freeimages.com/images/large-previews/89e/screens-row-1243513.jpg");
   background-position: center;
+  background-size: cover;
   height: 350px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;

@@ -22,6 +22,11 @@
         <li>If you have elements that aren't displaying their margin/width/height properly, check to see if they are
             inline elements and if so set them as inline-block</li>
         <li>body { margin: 0; } will get rid of that top and left margin that automatically comes with HTML pages</li>
+        <li>justify-content in flex box needs a height specified explicitly first to work properly</li>
+        <li>If imgs aren't aligning properly when side-by-side, check that the html has no line breaks between the imgs
+            (put the start of one img tag on the same line as the end of the other) since HTML adds a space for the
+            line-break between inline elements like spans or imgs which can throw off calculations (see photosite.html's
+            images)</li>
     </ul>
 </body>
 

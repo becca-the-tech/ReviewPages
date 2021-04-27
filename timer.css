@@ -1,0 +1,47 @@
+body {
+/*    background: #430C15;*/
+    background: #FDF1E7;
+    margin: 3% 10%;
+}
+
+/* TIMER SELECTORS */
+h1, h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: #430C15;
+    background-color: #479AD1;
+    padding: 1%;
+    margin: 2%;
+}
+
+h1 {
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+    color: #D6E9F5;
+}
+
+/* STUDY FORM SELECTORS */
+h3 {
+    color: #691321;
+}
+
+.studyForm {
+    margin: 2%;
+    background: #D6E9F5;
+    padding: 1% 2%;
+    height: 500px;
+}
+
+div.questions {
+    float: left;
+    width: 30%;
+}
+
+div.learnReview {
+    float: right;
+    width: 60%;
+}

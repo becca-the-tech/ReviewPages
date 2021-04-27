@@ -1,7 +1,10 @@
-let footer = document.getElementById("bottom");
-let btn = document.getElementById("btn");
+let timeLeft = document.getElementById("timeLeft");
+let focus = document.getElementById("focus");
+let learnReview = document.getElementById("learnReview");
+let reviewInput = document.getElementById("reviewInput");
+let addBtn = document.getElementById("addBtn");
 
-let count = 25;
+let count = 60;
 count *= 60;
 
 let countInMins = Math.floor(count / 60);
@@ -18,31 +21,19 @@ function decreaseCount() {
         count--;
         countInMins = Math.floor(count / 60);
         countInSeconds = count % 60;
-        footer.innerText = countInMins + " minutes, " + countInSeconds + " seconds remaining";
+        timeLeft.innerText = countInMins + " minutes, " + countInSeconds + " seconds remaining";
     }
     return count;
 }
 
-let originalMins = countInMins;
-let originalSecs = countInSeconds;
-let originalCount = count;
-
-function pause() {
-    originalMins = countInMins;
-    originalSecs = countInSeconds;
-    originalCount = count;
-
-    count = 0;
-}
-
-function unpause() {
-    count = originalCount;
-    countInMins = originalMins;
-    countInSeconds = originalSecs;
-}
 
 let interval = setInterval(decreaseCount, 1000);
-btn.addEventListener("click", function() {
-    pause();
-    btn.innerHTML = "Resume";
+
+addBtn.addEventListener("click", function() {
+    let newLearning = reviewInput.value;
+    let newPara = document.createElement("p");
+    let newText = document.createTextNode(newLearning);
+    newPara.appendChild(newText);
+
+    learnReview.appendChild(newPara);
 });

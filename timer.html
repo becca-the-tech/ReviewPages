@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" type="text/css" href="timer.css">
+</head>
+
+<body>
+    <div class="timer">
+        <h1>Time Left Out of 60 Minutes</h1>
+        <h2 id="timeLeft"></h2>
+    </div>
+
+    <div class="studyForm">
+        <div class="questions">
+            <h3>What To Study</h3>
+            <textarea id="focus" placeholder="Topic to focus on?"></textarea>
+            <h3>What did I learn?</h3>
+            <textarea id="reviewInput" col="12" rows="5"></textarea>
+            <button id="addBtn" type="button">Add!</button>
+        </div>
+        <div id="learnReview"></div>
+    </div>
+    <script src="timer.js"></script>
+</body>
+
+</html>

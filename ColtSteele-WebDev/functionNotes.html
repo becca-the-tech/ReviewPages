@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Notes</title>
+</head>
+
+<body>
+    <h1>Notes on Functions</h1>
+    <ul>
+        <li>
+            <strong>"this" keyword</strong>
+            The "this" keyword depends on invocation context (where it was called). So if you have an object with a
+            method (car.drive()) but you save it to a new variable (let goToWork = car.drive() ) and car.drive uses the
+            this keyword, it won't work when you call goToWork since functions declared have the window object as their
+            parent instead of the initial object they were created off of.
+        </li>
+        <li>
+            <strong>arr.filter()</strong><br>
+            arr.filter(func) will create a new array after applying the function to each item in 'arr' and whichever
+            items return true will be listed in the new array that is created... Ex: arr = [1,8,10,12,3]. arr.filter(num
+            => { return num > 8}) would create a new array of [10,12] since those were the only that returned true.
+        </li>
+        <li>
+            <strong>arr.some()</strong> and <strong>arr.every()</strong><br>
+            arr.some(function) method checks that at least one item in an array returns true from the function passed
+            in. arr.every(func) will check every item in an array to be sure all return true, otherwise it will reutrn
+            false
+        </li>
+        <li>
+            <strong>arr.reduce()</strong><br>
+            arr.reduce(function (accumulator, currentValue) { return accumultator + currentValue; } is used to keep
+            track of a value and the current value and update it with each iteration through to a new current value. It
+            doesn't have to be plus or minus, it can be any type of mathematical calculation being applied to each. You
+            can also use it to find min or max. Ex: arr = [3,7,9,1,4] arr.reduce( (min, currentValue) => { if(min &lt;
+            currentValue){ return min } else { return currentValue } } which would return 1.
+        </li>
+    </ul>
+</body>
+
+</html>

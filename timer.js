@@ -3,6 +3,8 @@ let focus = document.getElementById("focus");
 let learnReview = document.getElementById("learnReview");
 let reviewInput = document.getElementById("reviewInput");
 let addBtn = document.getElementById("addBtn");
+let topicName = document.getElementById("topicName");
+
 
 let count = 60;
 count *= 60;
@@ -30,10 +32,13 @@ function decreaseCount() {
 let interval = setInterval(decreaseCount, 1000);
 
 addBtn.addEventListener("click", function() {
+    topicName.innerText = focus.value;
+
     let newLearning = reviewInput.value;
     let newPara = document.createElement("p");
     let newText = document.createTextNode(newLearning);
     newPara.appendChild(newText);
 
     learnReview.appendChild(newPara);
+    reviewInput.value = '';
 });

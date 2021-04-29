@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ES6 Notes</h1>
+    <ul>
+        <li>
+            Default params are when you add a variable = "defaultValue" within a function declaration. If you have
+            multiple
+            params, any params with defaults should be added after the regular params so it works properly.
+        </li>
+        <li>
+            Spread operator in function calls, expands out the argument array/string into multiple individual
+            arguments.. Ex:
+            Math.max(num1, num2, num3...) can only take number arguments, it can't work with an array of numbers by
+            itself. But
+            if numArray = [1,5,9,3] you use Math.max(...numArray) then it will expand that array and pass it into
+            Math.max as
+            each individual number arguments (as if you had passed in just Math.max(1,5,9,3) and it will find the max of
+            9.
+        </li>
+        <li>
+            Spread operator in function calls can also be used on strings. So console.log("becca") takes in just the
+            string and
+            prints it. But if you use console.log(..."becca") it will pass each character into the console.log as
+            separate
+            arguments, as if it were console.log("b","e","c","c","a")
+        </li>
+        <li>
+            With arrays, you have to be careful when trying to copy them since if you have arr1 =[1,2,3] and you try to
+            make
+            arr2 = arr1, this doesn't actually make a copy since both arrays now point at the same memory location. So
+            any
+            changes done to one array will affect both. But using the spread operator, you can make a new copy. arr2 =
+            [...arr1]
+            will copy over the results from arr1 into a new array for arr2. You could even add to it with multiple
+            arrays or
+            other items at the end so arr2 = [...arr1, ...arr3, 1, 2, 3]
+        </li>
+        <li>
+            With objects, you can use spread to copy an object, like with arrays. If two objects that you copy into a
+            new object
+            have the same keys, whichever object value comes last is what is written. Ex: let person = {name: 'Becca',
+            age: 99},
+            let user = { username: 'someone', age: '13 months'}, let personAndUser = {...person, ...user} would have
+            keys of
+            name, age, and username but age would be '13 months' instead of '99' since user.age overwrites the value
+            from
+            person.age
+        </li>
+        <li>
+            You can also spread an array/string into an object. let newObj = {...['a','b','c']} where the keys will be
+            the array
+            indexes. So newObj is 0:'a', 1:'b', 2:'c'
+        </li>
+        <li>
+            Rest params look like the spread operator, but instead of splitting something out it makes a list of
+            arguments passed into a function to be an array. Functions automatically have access to an arguments object
+            with arguments[0] being the first argument passed in, but they aren't automatically arrays despite looking
+            like an array. So use rest params to turn them into an actual array, especially since arguments doesn't have
+            access to array methods and can't be used in arrow functions. Ex: function add(...nums){ return
+            nums.reduce((total, currentVal) => { return total + currentVal }) }, nums is turned into an array of numbers
+            that was passed into the function. So add(5,8,7) would have within the function a nums=[5,8,7] which it then
+            performs the action on.
+        </li>
+        <li>
+            <strong>Destructuring Arrays</strong><br>
+            Destructuring arrays is turning parts of arrays into individual variables without writing them out
+            individually. Order matters for declaring the variable names since they match with the location in the
+            array. Ex: let [num1, num2, ...otherNums] = [1,2,5,6,9] will turn num1 into a variable that holds 1,
+            num2 = 2, otherNums = [5,6,9]
+        </li>
+        <li>
+            <strong>Destructuring Objects</strong><br>
+            Destructuring objects is turning the key-value pairs from objects into their own variables. Names matter and
+            should match the name of the key, unless specified a different one. Ex: let { name, emailAddress: email,
+            color = 'N/A' } = objName so name is objName.name, the variable email is made from objName.emailAddress, and
+            the variable color is set to 'N/A' if the objName.color does not exist otherwise it's set to whatever
+            objName.color is.
+        </li>
+        <li>
+            <strong>Destructuring Params</strong><br>
+            When a param is expecting an object, but you only need part of that object, you can use destructuring for
+            the variables you need within the parameters of the function, just include an extra set of parentheses
+            around the {}. Ex: function greeting( ({ name, favoriteGreeting: greeting = "Hello" })){ return greeting + "
+            " + name }. So the greeting function expects an object, extracts the name and favoriteGreeting properties
+            (turns favoriteGreeting into a variable named greeting, that has a default value if it doesn't exist as
+            'Hello') and then uses name and greeting in its return.
+        </li>
+    </ul>
+</body>
+
+</html>

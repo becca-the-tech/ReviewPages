@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ping Pong Scoring</h1>
+    <div class="container">
+        <div class="score"><span class="player1">0</span> to <span class="player2">0</span> out of <span
+                class="numRounds">3</span> rounds<br>
+            <span id="winner"></span>
+        </div>
+
+        <select name="playToScore" id="selectScore">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select><br>
+        <button class="player1-btn">Player1 +</button>
+        <button class="player2-btn">Player2 +</button>
+        <button class="reset">Reset</button>
+
+        <script src="pingPong.js"></script>
+    </div>
+</body>
+
+</html>

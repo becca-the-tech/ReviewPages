@@ -10,56 +10,133 @@
 </head>
 
 <body>
-    <header id="top">
-        <nav>
-            <a href="#top">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <h1>Hi, I'm Becca, a software engineer</h1>
-        <h2>Currently looking for opportunities in Tampa or Orlando, FL (or remote)</h2>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a software engineer who loves to learn and read, when I'm not coding I can probably be found outside
-                with a book, often watching wildlife. I also like numbers, so often my projects are related to
-                collecting/storing data.</p>
-            <h3>My Tech Stack</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>MongoDB</li>
-                <li>Express</li>
-                <li>Bootstrap</li>
-                <li>React</li>
-                <li>Typescript</li>
-                <li>Java</li>
-                <li>Angular</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="container">
-                <div class="box portfolio">
-                    <a href="" target="_blank">Learning Tracker</a>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header id="top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-end fixed-top">
+                <a class="navbar-brand text-info" href="#">BV</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </div>
                 </div>
-                <div class="box portfolio">
-                    <a href="" target="_blank">Blog</a>
-                </div>
-                <div class="box portfolio">
-                    <a href="" target="_blank">ToDo List</a>
-                </div>
-                <div class="box portfolio">
-                    <a href="" target="_blank">Book List</a>
+            </nav>
+
+            <div class="container-fluid jumbotron my-0 mt-5" style="background-color: #D5D7D8;">
+                <div class="row">
+                    <div class="col"><img src="email_plant.JPG" alt="plant that can send emails" /></div>
+                    <h1 class="col text-align-center display-3">Becca's Portfolio</h1>
+                    <h2 class="col-2">Looking for opportunities in <span class="text-info">Tampa</span>
+                        (or remote)
+                    </h2>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer id="bottom">
-    </footer>
-</body>
+        </header>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I'm a software engineer who loves to learn and read, when I'm not coding I can probably be found
+                    outside
+                    with a book, often watching wildlife. I also like numbers, so often my projects are related to
+                    collecting/storing data.</p>
+                <h3>My Tech Stack</h3>
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">CSS</li>
+                    <li class="list-inline-item">JS</li>
+                    <li class="list-inline-item">MongoDB</li>
+                    <li class="list-inline-item">Express</li>
+                    <li class="list-inline-item">Bootstrap</li>
+                    <li class="list-inline-item">React</li>
+                    <li class="list-inline-item">Typescript</li>
+                    <li class="list-inline-item">Java</li>
+                    <li class="list-inline-item">Angular</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col portfolio bg-light display-4 px-5 py-5 ">
+                            <a class="text-info" href="" target="_blank">Learning Tracker</a>
+                        </div>
 
-</html>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 portfolio bg-success px-5 py-5 display-4">
+                            <a class="text-light" href="" target="_blank">Blog</a>
+                        </div>
+                        <div class="col-3 portfolio bg-warning px-5 py-5 display-4">
+                            <a class="text-white" href="" target="_blank">ToDo List</a>
+                        </div>
+                        <div class="col-3 portfolio bg-danger px-5 py-5 display-4">
+                            <a class="text-white" href="" target="_blank">Book List</a>
+                        </div>
+                        <div class="col-3 portfolio bg-primary px-5 py-5 display-4">
+                            <a class="text-white" href="" target="_blank">Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>
+                    What I've Learned:
+                </h2>
+                <p>
+                    This is a section for me to post things I've learned from these projects. Such as with my learning
+                    tracker, I'm realizing the power of React to reduce things down into components since currently it
+                    just uses EJS and it is becoming an ever-increasing codebase which can cause confusion. Also the
+                    learning tracker has been teaching me the importance of planning out features and manage the
+                    project.
+                </p>
+                <h2>
+                    Currently Learning:
+                </h2>
+                <p>Currently I'm tackling the Book List form since it blocks viewing the table in
+                    mobile and with
+                    browsers other than Chrome.</p>
+            </section>
+        </main>
+        <footer id="bottom" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav class="navbar">
+                            <a class="text-white" href="#top">Home</a>
+                            <a class="text-white" href="#about">About</a>
+                            <a class="text-white" href="#projects">Projects</a>
+                            <a class="text-white" href="#contact">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+        <script src="portfolio.js"></script>
+    </body>
+
+    </html>

@@ -16,6 +16,11 @@ section:nth-of-type(2n){
     background-color: #D5D7D8;
 }
 
+img {
+    width: 200px;
+    border-radius: 50px;
+}
+
 /*Colors used (courtesy of Cloudflare Designs)
 parent bg: #66C3D1
 color: #1D5962

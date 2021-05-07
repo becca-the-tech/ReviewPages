@@ -1,0 +1,38 @@
+<!-- Practice using fetch with Promises and fetch with async/await
+Uses the API: https://www.cryptonator.com/api/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Testing this script</h1>
+
+    <script>
+        // fetch("https://api.cryptonator.com/api/ticker/btc-usd")
+        //     .then(res => {
+        //         console.log("WAITING TO PARSE...", res);
+        //         return res.json();
+        //     }).then(data => {
+        //         console.log("DATA PARSED.");
+        //         console.log("Change in 24 hrs is: " + data.ticker.change);
+        //     }).catch(err => {
+        //         console.log("Oh no! An error: " + err);
+        //     });
+
+        const fetchBitcoinPrice = async () => {
+            const res = await fetch("https://api.cryptonator.com/api/ticker/doge-usd");
+            const data = await res.json();
+            console.log(data.ticker.price);
+        }
+    </script>
+</body>
+
+</html>

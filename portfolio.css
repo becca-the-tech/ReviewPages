@@ -28,4 +28,12 @@ bg: #D5D7D8
 border: #2D1832
 */
 
+svg {
+    padding: 0;
+    /* border-radius: 50%; */
+}
 
+svg:hover {
+    padding: 0.25px;
+    border: 1px solid lightskyblue;
+}

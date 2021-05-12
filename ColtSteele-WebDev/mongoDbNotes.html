@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>MongoDB notes</h1>
+    <ul>
+        <li>show dbs -> lists existing databases use certainDB -> changes the db in use to certainDB show collections ->
+            shows existing collections within the DB
+        </li>
+        <li>db.collectionName.insertOne({name: valueName, age: valueAge}) -> inserts a single JS object into the
+            collectionName with the key-value pairs listed in the parentheses
+        </li>
+        <li>db.collectionName.find() will show you which documents (the objects you've added to the collection) are part
+            of that collectionName
+        </li>
+        <li>db.collectionName.insertMany([{ name: "object1", type: "whatever"}, {name: "object2", type: "something"]) ->
+            takes in an array of objects and adds them as documents to the collectionName
+        </li>
+        <li>db.collectionName.insert() -> can take either a single object or an array of objects
+        </li>
+        <li>db.collectionName.find({name: "object1"}) -> find can take in an object just containing the key-value
+            options you want to find, but it is case-sensitive
+        </li>
+        <li>db.collectionName.findOne({isBoolean: true}) -> will find the first matching result, returns the actual
+            document whereas find() returns a cursor (which is like a pointer to the documents)
+        </li>
+        <li>db.collectionName.updateOne({name: "object1"}, {$set: { type: "what-whatever"} } ) -> the way of calling
+            updateOne is the first object is what you are selecting based on, then the second object is {$set: {} } with
+            the innermost brackets being which fields you are updating
+        </li>
+        <li>db.collectionName.updateOne({name: "object1"}, {$set: {type: "umm whatever"}, $currentDate: {lastChanged:
+            true} }) -> will update the document that has a name of "object1" and change its type to "umm whatever", but
+            it will also add a lastChanged field of type ISO-date set for the time when updated
+        </li>
+        <li>db.collectionName.deleteOne({filter: true}) -> will delete first document it finds that matches the selector
+            condition
+        </li>
+        <li>db.collectionName.deleteMany({filter: true}) -> will delete all documents that match true for the filter
+            condition, leaving it blank will delete everything from a collection
+        </li>
+    </ul>
+</body>
+
+</html>

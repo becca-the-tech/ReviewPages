@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Quote</title>
+</head>
+
+<body>
+    <form action="/quotes/<%=quote._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="content">
+                Quote:
+            </label>
+            <input type="text" name="quoteContent" id="content" value="<%= quote.quoteContent %>"
+                placeholder="If I were a quote I would go here">
+        </div>
+        <div>
+            <label for="author">Author </label>
+            <input type="text" name="author" id="author" value="<%= quote.author %>" placeholder="Anonymous">
+            <label for="book">Book Source (if exists) </label>
+            <input type="text" name="book" id="book" value="<%= quote.book %>" placeholder="Book-Title (Series #8)">
+        </div>
+        <div>
+            <label for="tags">Add a tag </label>
+            <input type="text" name="tags" id="tags">
+        </div>
+        <div>
+            <label for="userNotes">User Notes</label>
+            <textarea id="userNotes" name="userNotes"><%= quote.userNotes %></textarea>
+        </div>
+        <button type="submit">Add quote</button>
+    </form>
+    <a href="/quotes/<%= quote._id %>">Back to Quote</a>
+    <a href="/quotes">View All Quotes</a>
+</body>
+
+</html>

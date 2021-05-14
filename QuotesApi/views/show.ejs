@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Quote</title>
+</head>
+
+<body>
+    <h1>Quote</h1>
+    <p>
+        <%= quote.quoteContent %> <br>-<span class="author">
+                <%= quote.author %>
+            </span> <span class="book"> (<%= quote.book %>) </span>
+    </p>
+    <p> Tags:
+        <%= quote.tags %>
+            <br>
+            <span class="likes"> Likes <%= quote.likes %> </span>
+    </p>
+    <br><br>
+    <h2>User Notes on this Quote</h2>
+    <p>
+        <%= quote.userNotes %>
+    </p>
+    <hr>
+    <form method="POST" action="/quotes/<%= quote._id %>?_method=DELETE">
+        <button>DELETE THIS QUOTE</button>
+    </form>
+</body>
+
+</html>

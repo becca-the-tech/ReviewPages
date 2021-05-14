@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middleware Notes</title>
+</head>
+
+<body>
+    <h1>Middleware Notes</h1>
+    <ul>
+        <li>app.use() runs on every single incoming request, no matter the route if placed at the top</li>
+        <li>middleware is any code that runs between the request and the response, functions that run during the
+            request/response lifecycle
+        </li>
+        <li>res.send would stop the next function from being called, so next would not run EX: app.use((req, res, next)
+            => {
+            res.send("I get printed on every route"); next() })</li>
+        <li>
+            if next() isn't called, then it stops after app.use and does not continue on to the app.gets (or whatever is
+            below
+            it in the file) Ex: app.use((req, res, next) => { console.log("I print to console on each route"); next();
+            })
+
+        </li>
+        <li>
+            fake password verification middleware just to show theory of how to protect certain routes, clearly this
+            isn't
+            very secure<br>Ex: <br>const verifyPassword = (req, res, next) => { const { password } = req.query; if
+            (password ===
+            'something') { next(); } res.send("Sorry, you need the valid password!"); };<br><br>verifyPassword acts as a
+            middleware
+            since it runs before the (req, res) callback so it only sends "My secret is: " if verifyPassword sends
+            next(),
+            otherwise it gets stuck before the callback<br>Ex:<br> app.get("/secret", verifyPassword, (req, res) => {
+            res.send("MY
+            SECRET
+            IS: Sometimes I like to read past my bed time."); });
+        </li>
+    </ul>
+</body>
+
+</html>

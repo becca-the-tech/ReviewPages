@@ -27,6 +27,14 @@
             margin: 10px 20px;
         }
 
+        .row div:last-child {
+            border: 3px solid #333;
+        }
+
+        .row .last {
+            border: 3px solid #333;
+        }
+
         .total {
             border: 3px solid #333;
             background: lavender;
@@ -76,7 +84,8 @@
                     <div class="col-3 bg-success">56-63 hrs</div>
                 </div>
                 <div class="row">
-                    <div class="offset-11 col-1 total">Total: 47/63</div>
+                    <div class="offset-11 col-1 total">Total: <span class="completedHrs">47</span>/<span
+                            class="totalHrs">63</span></div>
                 </div>
             </article>
         </section>
@@ -90,7 +99,8 @@
                     <div class="col-3 bg-success">16-22 hrs</div>
                 </div>
                 <div class="row">
-                    <div class="offset-11 col-1 total">Total: 2.5/22</div>
+                    <div class="offset-11 col-1 total">Total: <span class="completedHrs">2.5</span>/<span
+                            class="totalHrs">22</span></div>
                 </div>
             </article>
         </section>
@@ -100,8 +110,9 @@
                 <div class="row">
                     <div class="col-3 bg-primary">1-5 hrs</div>
                     <div class="col-3 bg-success">6-10 hrs</div>
-                    <div class="col-3 bg-primary">11-15 hrs</div>
-                    <div class="offset-2 col-1 total">Total: 0/15</div>
+                    <div class="col-3 bg-primary last">11-15 hrs</div>
+                    <div class="offset-2 col-1 total">Total: <span class="completedHrs">0</span>/<span
+                            class="totalHrs">15</span></div>
                 </div>
             </article>
         </section>
@@ -121,7 +132,8 @@
                     <div class="col-3 bg-primary">36-40 hrs</div>
                 </div>
                 <div class="row">
-                    <div class="offset-11 col-1 total">Total: 0/40</div>
+                    <div class="offset-11 col-1 total">Total: <span class="completedHrs">0</span>/<span
+                            class="totalHrs">40</span></div>
                 </div>
             </article>
         </section>
@@ -136,10 +148,14 @@
                 </div>
                 <div class="row">
                     <div class="col-3 bg-success">21-25 hrs</div>
-                    <div class="col-3 bg-primary">26-32 hrs</div>
-                    <div class="offset-5 col-1 total">Total: 0/32</div>
+                    <div class="col-3 bg-primary last">26-32 hrs</div>
+                    <div class="offset-5 col-1 total">Total: <span class="completedHrs">0</span>/<span
+                            class="totalHrs">32</span></div>
                 </div>
             </article>
+        </section>
+        <section>
+            <article class="bg-dark text-info p-2 text-right" id="hourCalc"></article>
         </section>
     </main>
 
@@ -150,6 +166,24 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script>
+        let completedHrs = document.getElementsByClassName("completedHrs");
+        let totalHrs = document.getElementsByClassName("totalHrs");
+
+        let totalCompletedHrs = 0;
+        let totalAllHrs = 0
+        for (let i = 0; i < completedHrs.length; i++) {
+            let hours = Number(completedHrs[i].innerText);
+            totalCompletedHrs += hours;
+        }
+        for (let i = 0; i < totalHrs.length; i++) {
+            let allHours = Number(totalHrs[i].innerText);
+            totalAllHrs += allHours;
+        }
+
+        let hourCalcSection = document.getElementById("hourCalc");
+        hourCalcSection.innerText = `Total Hours Finished: ${totalCompletedHrs} \n Total of All Hours: ${totalAllHrs}`;
+    </script>
 </body>
 
 </html>

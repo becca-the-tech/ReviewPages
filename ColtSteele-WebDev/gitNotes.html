@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Notes</title>
+</head>
+
+<body>
+    <h1>Git Notes</h1>
+    <h2>Git Branch Notes</h2>
+    <ul>
+        <li>git branch -> shows all available branches, includes a * on the branch you are currently on
+        </li>
+        <li>git branch branchName -> creates a new branch with the name branchName
+        </li>
+        <li>git switch branchName -> switches the current branch to branchName
+        </li>
+        <li>git commit -a -m "Commit message here" -> is a way of adding all unstaged changes without having to type git
+            add .
+        </li>
+        <li>git branch branchName -> creates a new branch with the name branchName based off of which branch the HEAD
+            currently is on, so if it is run off of master it will include git log of master's previous commits to the
+            point the branch was made, but if it were branched off of sideBranch then it would show sideBranch's commits
+            up to the point it was branched off
+        </li>
+        <li>git checkout branchName -> the more historical way of switching the current branch to branchName, but git
+            checkout can do far more than just changing branches which is why git switch was made to simplify usage
+        </li>
+        <li>git switch -c newBranchName -> the -c flag allows you to create a new branch and switch to it at the same
+            time
+        </li>
+        <li>git checkout -b newBranchName -> adding the -b flag to git checkout makes the new branch and then switches
+            to it
+        </li>
+        <li>if you try to git switch branchName while the current branch you are on has un-committed changes, it will
+            give you a warning that new changes would be overwritten by checkout so they need to be committed or stashed
+            before switching branches
+        </li>
+        <li>if you use git switch branchName and have a file that only exists on the currentBranch and is not being
+            tracked (example.txt), git switch doesn't complain about overwriting instead the untracked file will come
+            with you to the branchName that you switched to (example.txt will move from currentBranch to branchName with
+            git status still reminding you example.txt is untracked)
+        </li>
+        <li>git branch -d branchName -> will delete the branch, but all changes must be merged in... cannot be called
+            while currently on branchName
+        </li>
+        <li>git branch -D branchName -> will force delete the branchName regardless of if there are changes unmerged
+            still.. cannot be called while currently on branchName
+        </li>
+        <li>git branch -m newBranchName -> if you are currently on branchToRename, run that command to rename the branch
+            to newBranchName.. -m flag means move, which is what the renaming does by moving it to a branch with that
+            new name
+        </li>
+        <li>HEAD -> is a reference (pointer) to the last commit on whichever branch is checked out.. so cat .git/HEAD
+            shows ref: refs/heads/currentBranchName ... and if you check out that file path you will find the commit
+            hash of the most recent commit
+        </li>
+    </ul>
+</body>
+
+</html>

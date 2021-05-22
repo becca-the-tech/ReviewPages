@@ -33,7 +33,7 @@ h3 {
     margin: 0 2%;
     background: #D6E9F5;
     padding: 1% 2%;
-    height: 370px;
+    min-height: 370px;
 }
 
 .studyCard {
@@ -44,6 +44,7 @@ h3 {
 div.questions {
     float: left;
     width: 30%;
+    margin-bottom: 30px;
 }
 
 div.learnReview {

@@ -4,11 +4,24 @@ body {
 h1 {
     text-align: center;
 }
-#container {
+section {
     background-color: #003049;
     width: 90%;
     height: 500px;
-    margin: 0 auto;
+    margin: 20px auto;
     border: 5px solid #003049;
+    display: flex;
 }
 
+#columns {
+    flex-direction: column;
+}
+
+#rows {
+    flex-direction: row;
+}
+
+div {
+    min-width: 50px;
+    min-height: 50px;
+}

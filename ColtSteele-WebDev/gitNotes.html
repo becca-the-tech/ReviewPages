@@ -59,6 +59,29 @@
             hash of the most recent commit
         </li>
     </ul>
+
+    <!-- GIT MERGE NOTES -->
+    <h2>Git Merge Notes</h2>
+    <ul>
+        <li>Git merges are based off of branches, not specific commits</li>
+        <li>The git merge is always to the current HEAD branch
+        </li>
+        <li>Ex of a fast-forward merge: when on branchName and wanting to merge it to master, run "git switch master" to
+            change the HEAD to master.. then run "git merge branchName" to merge the branch on to master so master
+            "catches up" with the work that's been done on branchName
+        </li>
+        <li>git branch -v -> shows most recent commit on each of the branches that exist
+        </li>
+        <li>A fast-forward merge only happens when the branch to be merged was split off from the master branch but
+            master hasn't moved forward any with more commits, so it just lets master catch up with the new commits on
+            branchName
+        </li>
+        <li>When both master and branchName have new commits the other branch is not aware of, you merge the same way by
+            switching to the master (git switch master) and then git merge branchName, but this time it creates a new
+            commit for the merge that you'll need to leave a message for (or leave the default message). This only works
+            if there are no merge conflicts.
+        </li>
+    </ul>
 </body>
 
 </html>

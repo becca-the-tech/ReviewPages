@@ -20,6 +20,9 @@
             <br>
             <span class="likes"> Likes <%= quote.likes %> </span>
     </p>
+    <button href="/like"
+        onclick="document.getElementsByClassName('likes')[0].innerText = 'Likes <%= quote.likes + 1 %>'">Add
+        Like</button>
     <br><br>
     <h2>User Notes on this Quote</h2>
     <p>

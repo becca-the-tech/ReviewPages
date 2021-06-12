@@ -26,10 +26,11 @@
             <span class="likes"> Likes <%= quote.likes %> </span>
     </div>
 
-    <button class="btn btn-success d-inline" href="/like"
+    <button class="btn btn-warning d-inline" href="/like"
         onclick="document.getElementsByClassName('likes')[0].innerText = 'Likes <%= quote.likes + 1 %>'">Add
-        Like</button>
+        Like</button><br><br>
     <a class="btn btn-primary btn-md d-inline" href="/quotes">Back to all quotes</a>
+    <a class="btn btn-success btn-md d-inline" href="/quotes/<%=quote._id%>/edit">Edit this quote</a>
     <br><br>
     <div class="row">
         <h2 class="col-3">User Notes on this Quote:</h2>

@@ -5,36 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add a New Quote</title>
+    <title>Edit A Quote</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
 </head>
 
-<body>
-    <form action="/quotes/<%=quote._id%>?_method=PUT" method="POST">
-        <div>
+<body class="container">
+    <h1>Edit quote</h1>
+    <form class="d-inline" action="/quotes/<%=quote._id%>?_method=PUT" method="POST">
+        <div class="row form-group">
             <label for="content">
                 Quote:
             </label>
-            <input type="text" name="quoteContent" id="content" value="<%= quote.quoteContent %>"
-                placeholder="If I were a quote I would go here">
+            <textarea class="form-control" name="quoteContent" rows="4" id="content"
+                placeholder="Input quote text here"><%=quote.quoteContent %></textarea>
         </div>
-        <div>
-            <label for="author">Author </label>
-            <input type="text" name="author" id="author" value="<%= quote.author %>" placeholder="Anonymous">
+        <div class="row form-group">
+            <label class="col-6" for="author">Author</label>
+            <input type="text" class="form-control" name="author" id="author" placeholder="Anonymous"
+                value="<%=quote.author%>">
             <label for="book">Book Source (if exists) </label>
-            <input type="text" name="book" id="book" value="<%= quote.book %>" placeholder="Book-Title (Series #8)">
+            <input class="form-control" type="text" name="book" id="book" placeholder="Book-Title (Series #8)"
+                value="<%=quote.book%>">
         </div>
-        <div>
+        <div class="row form-group">
             <label for="tags">Add a tag </label>
-            <input type="text" name="tags" id="tags">
+            <input type="text" class="form-control" name="tags" id="tags" placeholder="tag1, tag2"
+                value="<%=quote.tags%>">
         </div>
-        <div>
+        <div class="row form-group">
             <label for="userNotes">User Notes</label>
-            <textarea id="userNotes" name="userNotes"><%= quote.userNotes %></textarea>
+            <textarea class="form-control" id="userNotes" name="userNotes"><%=quote.userNotes %></textarea>
         </div>
-        <button type="submit">Add quote</button>
+        <button class="btn btn-success d-inline" type="submit">Update quote</button>
     </form>
-    <a href="/quotes/<%= quote._id %>">Back to Quote</a>
-    <a href="/quotes">View All Quotes</a>
+    <a class="btn btn-primary d-inline" href="/quotes/<%=quote._id%>">Back to this quote</a>
 </body>
 
 </html>

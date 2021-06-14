@@ -82,6 +82,38 @@
             if there are no merge conflicts.
         </li>
     </ul>
+    <h2>Git Diff Notes</h2>
+    <ul>
+        <li>git diff -> lists all changes in the working directory that are not staged for the next commit
+        </li>
+        <li>git diff shows chunks based off what has changed, it takes a bit above what was changed and a bit below the
+            change to show the context
+        </li>
+        <li>git diff calls one file (or version of the file) (a---) and the other file/version (b+++) to indicate which
+            parts exist in a and which in b
+        </li>
+        <li>git diff shows @@ - 3,4 +3,5 @@ to show the code chunk being shown starts at line 3, and in this case 4
+            lines were extracted in file (a) and 5 lines extracted in file (b)
+        </li>
+        <li>git diff HEAD -> can list both staged and unstaged changes made since the last commit
+        </li>
+        <li>if files are untracked by Git, git diff cannot be run on them to show differences until they are added to
+            the staging area (for git diff HEAD) or fully committed (for just git diff)
+        </li>
+        <li>git diff --staged (or git diff --cached, both do the same thing) will show only file differences that are
+            already staged to be committed
+        </li>
+        <li>git diff HEAD [filename] or git diff --staged [filename] -> lets you specify a single file that you want to
+            see all changes or only staged changes for just that file... if you want to check multiple files you can
+            just separate them by spaces
+        </li>
+        <li>git diff branch1..branch2 (or git diff branch1 branch2) -> compares changes between two branches (branch1
+            will be (a) and branch2 will be (b)
+        </li>
+        <li>git diff commitHash1..commitHash2 -> lets you compare changes between different commits over time (don't
+            have to be the most recent commits)
+        </li>
+    </ul>
 </body>
 
 </html>

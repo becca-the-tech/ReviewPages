@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Error Handling with Express Notes</h1>
+    <ul>
+        <li>If you use an app.use((err, req, res, next) => { }) ---> it's an error handling middleware that is running,
+            so
+            if an error is thrown in any way then the code will run and if next() is not called within the code then
+            there
+            are no further actions to be done
+        </li>
+        <li>If you want the error passed from one middleware to the next error-handling middleware, you can run
+            next(err) in
+            your first middleware
+        </li>
+        <li>You can define your own error that extends the built-in error class by: class AppError extends Error {
+            constructor(message, status) { super(); this.message = message; this.status = status }} module.exports =
+            AppError; ----> and then import it on your Express js page, that way you have access to built-in errors but
+            can
+            also provide custom statuses or messages
+        </li>
+        <li>res.status(404).send(message) -> lets you set the status code to whatever you want and then res.send
+            whatever
+            message is.
+        </li>
+        <li>Mongoose does not throw errors when nothing is found, it just leaves them as undefined.. so to handle them
+            in
+            async functions, you can have async (req, res, next) and then pass the error into next within the function
+            like
+            next(new AppError("Product not found", 404));
+        </li>
+        <li>if you throw an error due to something not being found in Mongoose, be sure to return next(err) that way it
+            won't keep trying to pass the info to EJS and still cause errors within the console even though they won't
+            be
+            displayed if res.send() was called by the middleware
+        </li>
+        <li>
+            For async functions, wrap everything in try{} catch(e){next(e)} blocks and make sure to add async (req, res,
+            next) within the route, but instead of returning the AppError you can just throw new AppError since it is
+            being
+            caught in the catch(e) block.
+        </li>
+        <li>function wrapAsync(fn){ return function(req, res, next){ fn(req, res, next).catch(e => next(e)); }}... can
+            be
+            used as a wrapped function for an async callback to avoid re-writing all those try and catch blocks to
+            handle
+            mongoose errors.
+        </li>
+        <li>
+            the point of that wrapAsync(fn) is that it runs the function passed in and just makes sure it catches any
+            errors
+            that the function encountered
+        </li>
+        <li>you can also create custom error handlers based on err.name being detected and passed to the specific type
+            of
+            error handler (like for validationErr vs syntaxErr)</li>
+    </ul>
+</body>
+
+</html>

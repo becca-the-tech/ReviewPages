@@ -1,39 +1,48 @@
 const input = require('readline-sync');
 
-let choice = input.question("Do you want to choose daily minutes to study or overall goal time period? (please type either 'daily' or 'goal' or 'cancel' to exit) \n");
+//let choice = input.question("Do you want to choose daily minutes to study or overall goal time period? (please type either 'daily' or 'goal' or 'cancel' to exit) \n");
 const options = ['daily', 'goal', 'cancel'];
 
-while (!options.includes(choice)) {
-    choice = input.question("Do you want to choose daily minutes to study or overall goal time period? (please type either 'daily' or 'goal' or 'cancel' to exit) \n");
-}
+let notOver = true;
 
-//choice = daily
-if (choice == options[0]) {
-    let studyTopic = input.question("What do you want to study? ");
-    let timeStudy = input.question("How long will you study daily (in minutes)? ");
+do {
+    let choice = input.question("Do you want to choose daily minutes to study or overall goal time period? (please type either 'daily' or 'goal' or 'cancel' to exit) \n");
+    while (!options.includes(choice)) {
+        choice = input.question("Do you want to choose daily minutes to study or overall goal time period? (please type either 'daily' or 'goal' or 'cancel' to exit) \n");
+    }
 
-    let timeInYear = Math.round(365 * Number(timeStudy) / 60 * 100) / 100;
-    let timeInMonth = Math.round(30 * Number(timeStudy) / 60 * 100) / 100;
-    let timeInWeek = Math.round(7 * Number(timeStudy) / 60 * 100) / 100;
+    //choice = daily
+    if (choice == options[0]) {
+        let studyTopic = input.question("What do you want to study? ");
+        let timeStudy = input.question("How long will you study daily (in minutes)? ");
 
-    console.log();
-    console.log(`\nIf you study ${timeStudy} minutes a day of ${studyTopic},
+        let timeInYear = Math.round(365 * Number(timeStudy) / 60 * 100) / 100;
+        let timeInMonth = Math.round(30 * Number(timeStudy) / 60 * 100) / 100;
+        let timeInWeek = Math.round(7 * Number(timeStudy) / 60 * 100) / 100;
+
+        console.log();
+        console.log(`\nIf you study ${timeStudy} minutes a day of ${studyTopic},
         you will study ${timeInWeek} hours per week
         ${timeInMonth} hours per month
-        and ${timeInYear} hours per year.`);
+        and ${timeInYear} hours per year.\n\n`);
 
-    console.log();
-    //choice = goal
-} else if (choice == options[1]) {
-    let studyTopic = input.question("What do you want to study? ");
-    let goalStudy = input.question("How many hours do you want to study? ");
-    let studyPeriod = input.question("Over how many days do you want to reach this goal? (week = 7, month = 30, year = 365) ");
+        console.log();
+        //choice = goal
+    } else if (choice == options[1]) {
+        let studyTopic = input.question("What do you want to study? ");
+        let goalStudy = input.question("How many hours do you want to study? ");
+        let studyPeriod = input.question("Over how many days do you want to reach this goal? (week = 7, month = 30, year = 365) ");
 
-    let calculatedStudyDaily = Math.round((Number(goalStudy) / Number(studyPeriod)) * 60 * 100) / 100;
+        let calculatedStudyDaily = Math.round((Number(goalStudy) / Number(studyPeriod)) * 60 * 100) / 100;
 
-    console.log();
-    console.log("If you want to study " + goalStudy + " hours of " + studyTopic + " over " + studyPeriod + " days, it will take you " + calculatedStudyDaily + " minutes a day.");
-}
+        console.log();
+        console.log("If you want to study " + goalStudy + " hours of " + studyTopic + " over " + studyPeriod + " days, it will take you " + calculatedStudyDaily + " minutes a day. \n\n");
+    } else if (choice == options[2]) {
+        notOver = false;
+        console.log("Exiting now");
+    }
+
+} while (notOver);
 
 /*let studyTopic = input.question("What do you want to study? ");
 let timeStudy = input.question("How long will you study daily (in minutes)? ");

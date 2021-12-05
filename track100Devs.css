@@ -1,3 +1,7 @@
+body {
+    background-color: navy;
+}
+
 nav li a {
     text-decoration: none;
     display: inline-block;

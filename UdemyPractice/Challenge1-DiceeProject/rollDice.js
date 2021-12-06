@@ -16,14 +16,28 @@ function rollDice() {
     if (random1 > random2) {
         topPage.innerText = "Player 1 Wins!";
         topPage.className = "player1";
+        playerDice1.parentElement.classList.add("winner");
+        if (playerDice2.parentElement.classList.contains("winner")) {
+            playerDice2.parentElement.classList.remove("winner");
+        }
         body.className = "player1Background";
     } else if (random2 > random1) {
         topPage.innerText = "Player 2 Wins!";
         topPage.className = "player2";
+        playerDice2.parentElement.classList.add("winner");
+        if (playerDice1.parentElement.classList.contains("winner")) {
+            playerDice1.parentElement.classList.remove("winner");
+        }
         body.className = "player2Background";
     } else {
         topPage.innerText = "Players Tie. :(";
         topPage.className = "";
+        if (playerDice1.parentElement.classList.contains("winner")) {
+            playerDice1.parentElement.classList.remove("winner");
+        }
+        if (playerDice2.parentElement.classList.contains("winner")) {
+            playerDice2.parentElement.classList.remove("winner");
+        }
         body.className = "";
     }
 }

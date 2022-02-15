@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    color: navy;
+    background-color: lightcoral;
+}
+
+nav li {
+    display: inline-block;
+    width: 8%;
+}
+
+nav input {
+    display: inline-block;
+    min-width: 2%;
+}
+
+nav, nav a {
+    background: black;
+    color: white;
+}
+
+main h1 {
+    float: left;
+    width: 90%;
+}
+
+.date {
+    float: right;
+    width: 10%;
+}
+
+.main-topics {
+    clear: both;
+    margin-top: 20px;
+    min-height: 400px;
+}
+
+.main-topic {
+    float: left;
+    width: 50%;
+    min-height: 400px;
+    background: palegreen;
+}
+
+.smaller-topic {
+    float: right;
+    width: 23%;
+    min-height: 200px;
+    background: plum;
+}

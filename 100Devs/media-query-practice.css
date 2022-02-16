@@ -1,0 +1,83 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+
+  .clear {
+      clear: both;
+  }
+
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+
+
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+
+  main section, .bottom section{
+    width: 33.3333%;
+    height: 300px;
+    border: 1px solid black;
+    float: left;
+  }
+  .bottom section{
+    width: 50%;
+  }
+
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+  /* On mobile, please make all sections stack  */
+  @media (max-width: 360px){
+    section {
+      min-width: 100%;
+    }
+  }
+
+  /* On tablet, please make the sections in main stack  */
+  @media (max-width: 720px){
+    main section{
+      min-width: 100%;
+    }
+  }
+
+  /* On laptop, please keep the normal layout, but everything should be light green */
+  @media (min-width: 721px) and (max-width: 1200px){
+    /* This works if I just want all sections styled the same,
+    but if I want the parent containers styled separately, I had to
+    add the clearfix to main and .bottom before any styles would
+    show up on them
+
+
+    section {
+      background: lightgreen;
+    } */
+
+    main {
+      background: lightcoral;
+    }
+
+    .bottom {
+      background: lightseagreen;
+    }
+  }
+
+  /* On larger screens, please keep the normal layout, but everything should be light blue */
+  @media (min-width: 1201px){
+    section {
+      background: lightblue;
+    }
+  }

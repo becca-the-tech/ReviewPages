@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: aquamarine;
+}
+
+aside {
+    float: left;
+    width: 10%;
+    height: 500px;
+    background: plum;
+}
+
+section {
+    float: left;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+    height: 100px;
+    width: calc(84% / 7);
+}
+
+main section:first-of-type {
+    margin-left: 3%;
+    border-left: 2px solid gray;
+}
+
+div:first-of-type section {
+    height: 2rem;
+}
+
+main div:last-of-type section {
+    border-bottom: 2px solid gray;
+}

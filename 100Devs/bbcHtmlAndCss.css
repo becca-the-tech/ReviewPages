@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h4, h5 {
     color: navy;
     background-color: lightcoral;
 }
@@ -50,4 +50,29 @@ main h1 {
     width: 23%;
     min-height: 200px;
     background: plum;
+}
+
+.main-topic {
+    background-image: url("https://images.unsplash.com/photo-1563166796-befbbd534d1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHJ1c3NpYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+    color: white;
+    display: relative;
+}
+
+.info {
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    padding-left: 20px;
+}
+
+.info a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.info h3 {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 500;
 }

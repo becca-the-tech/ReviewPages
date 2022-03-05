@@ -37,7 +37,7 @@ function randomize() {
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
 
-    bodyEl.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 1)`;
+    bodyEl.style.background = `rgba(${r}, ${g}, ${b}, 1)`;
     colorDisplay.innerText = `Color is: rgba(${r}, ${g}, ${b}, 1)`;
     colorDisplay.style.display = 'block';
 }

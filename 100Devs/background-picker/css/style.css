@@ -20,7 +20,7 @@ img{
 }
 ul{
   width: 100px;
-  height: 270px;
+  height: 310px;
   border: 3px solid black;
   margin: 0 auto;
   list-style: none;
@@ -33,6 +33,9 @@ li{
 
 .colorDisplay {
   display: none;
+  padding: 20px;
+  margin: 0 20px;
+  background: rgba(220,220,220, 0.8);
 }
 
 /******************************************
@@ -53,5 +56,10 @@ li{
 }
 
 #randomGradient {
-  background: linear-gradient(90deg, gray, purple, green, blue);
+/*  background: linear-gradient(90deg, gray, purple, green, blue); */
+  background: linear-gradient(90deg, white, black);
+}
+
+#randomGradient3Way {
+  background: linear-gradient(90deg, red 25%, green 35%, blue);
 }

@@ -3,6 +3,7 @@ let greenLi = document.querySelector("#green");
 let blueLi = document.querySelector("#blue");
 let randomLi = document.querySelector("#randomize");
 let randomGradientLi = document.querySelector("#randomGradient");
+let randomGradient3Li = document.querySelector("#randomGradient3Way");
 
 let colorDisplay = document.querySelector(".colorDisplay");
 
@@ -13,6 +14,7 @@ greenLi.addEventListener("click", partyGreen);
 blueLi.addEventListener("click", partyBlue);
 randomLi.addEventListener("click", randomize);
 randomGradientLi.addEventListener("click", randomGradient);
+randomGradient3Li.addEventListener("click", randomGradient3);
 
 function partyPurple() {
     bodyEl.style.backgroundColor = 'rgba(241, 63, 247, 1)';
@@ -37,9 +39,9 @@ function randomize() {
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
 
-    bodyEl.style.background = `rgba(${r}, ${g}, ${b}, 1)`;
-    colorDisplay.innerText = `Color is: rgba(${r}, ${g}, ${b}, 1)`;
-    colorDisplay.style.display = 'block';
+    bodyEl.style.background = `rgb(${r}, ${g}, ${b})`;
+    colorDisplay.innerText = `Color is: rgb(${r}, ${g}, ${b})`;
+    colorDisplay.style.display = 'inline-block';
 }
 
 function pickRandomColor() {
@@ -66,6 +68,27 @@ function randomGradient() {
     let secondColor = pickRandomColor();
 
     bodyEl.style.background = `linear-gradient(90deg, ${firstColor}, ${secondColor})`;
-    colorDisplay.innerText = `Color1 is: ${firstColor} \nColor2 is: ${secondColor}`;
-    colorDisplay.style.display = 'block';
+    colorDisplay.innerText = `Color1 is: ${firstColor} \nColor2 is: ${secondColor}
+    \nlinear-gradient(90deg, ${firstColor}, ${secondColor})`;
+    colorDisplay.style.display = 'inline-block';
 }
+
+function randomGradient3() {
+    let firstColor = pickRandomColor();
+    let secondColor = pickRandomColor();
+    let thirdColor = pickRandomColor();
+
+    bodyEl.style.background = `linear-gradient(90deg, ${firstColor} 25%, ${secondColor} 28%, ${thirdColor})`;
+    colorDisplay.innerText = `Color1 is: ${firstColor} \nColor2 is: ${secondColor} \nColor3 is: ${thirdColor}
+    \nlinear-gradient(90deg, ${firstColor} 25%, ${secondColor} 28%, ${thirdColor})`;
+    colorDisplay.style.display = 'inline-block';
+
+}
+
+/* Pretty colors:
+    rgb(239, 2, 108) ---> vibrant pink
+    linear-gradient(90deg, rgb(187, 48, 232), rgb(70, 211, 167)) --> light purple to an aqua green
+    rgb(37, 129, 192) --> a nice, almost cornflower blue
+    linear-gradient(90deg, rgb(15, 160, 158), rgb(189, 101, 92)) --> beachy blue to an almost sandy pink/orangey
+linear-gradient(90deg, rgb(228, 196, 123) 25%, rgb(55, 219, 193) 35%, rgb(146, 101, 195)) --> super beachy vibes, starting sandy colored, to aqua green, to a light purple
+*/

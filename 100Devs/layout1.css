@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+header, footer {
+    height: 50px;
+    background: lightgreen;
+}
+
+main, div {
+    display: flex;
+}
+
+section {
+    height: 150px;
+    border: 1px solid black;
+    background: gray;
+    flex: 1;
+}
+
+.bottom section {
+    background: skyblue;
+}

@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+header, footer {
+    background: skyblue;
+    height: 50px;
+    clear: both;
+}
+
+section, main {
+    background: lightcoral;
+    height: 400px;
+    width: 15%;
+    border: 1px solid black;
+    float: left;
+}
+
+main {
+    background: lightgreen;
+    width: 55%;
+}

@@ -1,0 +1,48 @@
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: beige;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+nav>h3 {
+    margin: 0;
+}
+
+#blog-list {
+    padding: 10px;
+}
+
+form {
+    padding: 60px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(186, 199, 178);
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+input+label {
+    margin-top: 5px;
+}
+
+button {
+    background: black;
+    color: rgb(186, 199, 178);
+    font-weight: bold;
+    padding: 6px;
+}
+
+button:hover {
+    background: rgb(236, 239, 228);
+    color: black;
+}
